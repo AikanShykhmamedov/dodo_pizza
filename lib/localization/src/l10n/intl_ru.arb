@@ -1,1 +1,9 @@
-{}
+{
+  "contact": "Контакты",
+  "contact_map": "Пиццерии на карте",
+  "contact_support": "Связаться с поддержкой",
+  "contact_call": "Позвонить",
+  "contact_chat": "Чат",
+  "contact_legal_documents": "Правовые документы",
+  "contact_about_app": "О приложении"
+}

@@ -1,1 +1,9 @@
-{}
+{
+  "contact": "Contact",
+  "contact_map": "See the map",
+  "contact_support": "Contact support",
+  "contact_call": "Call",
+  "contact_chat": "Chat",
+  "contact_legal_documents": "Legal documents",
+  "contact_about_app": "About our App"
+}

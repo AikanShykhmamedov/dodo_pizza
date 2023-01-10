@@ -49,6 +49,76 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Contact`
+  String get contact {
+    return Intl.message(
+      'Contact',
+      name: 'contact',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `See the map`
+  String get contact_map {
+    return Intl.message(
+      'See the map',
+      name: 'contact_map',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contact support`
+  String get contact_support {
+    return Intl.message(
+      'Contact support',
+      name: 'contact_support',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call`
+  String get contact_call {
+    return Intl.message(
+      'Call',
+      name: 'contact_call',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chat`
+  String get contact_chat {
+    return Intl.message(
+      'Chat',
+      name: 'contact_chat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Legal documents`
+  String get contact_legal_documents {
+    return Intl.message(
+      'Legal documents',
+      name: 'contact_legal_documents',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `About our App`
+  String get contact_about_app {
+    return Intl.message(
+      'About our App',
+      name: 'contact_about_app',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
