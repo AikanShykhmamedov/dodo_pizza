@@ -1,4 +1,9 @@
 {
+  "profile": "Profile",
+  "profile_let_get_acquainted": "Let's get acquainted!",
+  "profile_let_get_acquainted_content": "Save your delivery address and be the first one to know about our promotions",
+  "profile_enter_phone_number": "Enter the phone number",
+
   "contact": "Contact",
   "contact_map": "See the map",
   "contact_support": "Contact support",

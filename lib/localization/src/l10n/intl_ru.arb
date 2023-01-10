@@ -1,4 +1,9 @@
 {
+  "profile": "Профиль",
+  "profile_let_get_acquainted": "Давайте знакомиться!",
+  "profile_let_get_acquainted_content": "Подарим подарок на день рождения,\nсохраним адрес доставки\nи расскажем об акциях",
+  "profile_enter_phone_number": "Указать телефон",
+
   "contact": "Контакты",
   "contact_map": "Пиццерии на карте",
   "contact_support": "Связаться с поддержкой",

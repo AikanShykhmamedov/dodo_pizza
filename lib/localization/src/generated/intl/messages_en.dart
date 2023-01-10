@@ -31,6 +31,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Legal documents"),
         "contact_map": MessageLookupByLibrary.simpleMessage("See the map"),
         "contact_support":
-            MessageLookupByLibrary.simpleMessage("Contact support")
+            MessageLookupByLibrary.simpleMessage("Contact support"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "profile_enter_phone_number":
+            MessageLookupByLibrary.simpleMessage("Enter the phone number"),
+        "profile_let_get_acquainted":
+            MessageLookupByLibrary.simpleMessage("Let\'s get acquainted!"),
+        "profile_let_get_acquainted_content": MessageLookupByLibrary.simpleMessage(
+            "Save your delivery address and be the first one to know about our promotions")
       };
 }

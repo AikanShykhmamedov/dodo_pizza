@@ -4,4 +4,6 @@ abstract class AppAssets {
   static const map = 'assets/images/map.svg';
   static const vk = 'assets/images/vk.svg';
   static const youtube = 'assets/images/youtube.svg';
+
+  static const customerAndNumbers = 'assets/images/customer_and_numbers.svg';
 }

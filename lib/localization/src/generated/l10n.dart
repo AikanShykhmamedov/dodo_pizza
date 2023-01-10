@@ -50,6 +50,46 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Profile`
+  String get profile {
+    return Intl.message(
+      'Profile',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Let's get acquainted!`
+  String get profile_let_get_acquainted {
+    return Intl.message(
+      'Let\'s get acquainted!',
+      name: 'profile_let_get_acquainted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save your delivery address and be the first one to know about our promotions`
+  String get profile_let_get_acquainted_content {
+    return Intl.message(
+      'Save your delivery address and be the first one to know about our promotions',
+      name: 'profile_let_get_acquainted_content',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter the phone number`
+  String get profile_enter_phone_number {
+    return Intl.message(
+      'Enter the phone number',
+      name: 'profile_enter_phone_number',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Contact`
   String get contact {
     return Intl.message(

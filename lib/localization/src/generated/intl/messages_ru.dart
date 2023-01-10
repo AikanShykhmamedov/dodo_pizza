@@ -32,6 +32,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "contact_map":
             MessageLookupByLibrary.simpleMessage("Пиццерии на карте"),
         "contact_support":
-            MessageLookupByLibrary.simpleMessage("Связаться с поддержкой")
+            MessageLookupByLibrary.simpleMessage("Связаться с поддержкой"),
+        "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
+        "profile_enter_phone_number":
+            MessageLookupByLibrary.simpleMessage("Указать телефон"),
+        "profile_let_get_acquainted":
+            MessageLookupByLibrary.simpleMessage("Давайте знакомиться!"),
+        "profile_let_get_acquainted_content": MessageLookupByLibrary.simpleMessage(
+            "Подарим подарок на день рождения,\nсохраним адрес доставки\nи расскажем об акциях")
       };
 }
