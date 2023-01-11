@@ -10,5 +10,11 @@
   "contact_call": "Позвонить",
   "contact_chat": "Чат",
   "contact_legal_documents": "Правовые документы",
-  "contact_about_app": "О приложении"
+  "contact_about_app": "О приложении",
+
+  "basket": "Корзина",
+  "basket_empty": "Ой, пусто!",
+  "basket_empty_content": "Ваша корзина пуста, добавьте\nпонравившийся товар из «Меню».",
+  "basket_empty_delivery": "Мы доставим ваш заказ от 549 ₽",
+  "basket_go_to_menu": "Перейти в меню"
 }

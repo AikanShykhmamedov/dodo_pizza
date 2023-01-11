@@ -159,6 +159,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Basket`
+  String get basket {
+    return Intl.message(
+      'Basket',
+      name: 'basket',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Oops, it's empty here!`
+  String get basket_empty {
+    return Intl.message(
+      'Oops, it\'s empty here!',
+      name: 'basket_empty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your basket is empty, open the menu to get started.`
+  String get basket_empty_content {
+    return Intl.message(
+      'Your basket is empty, open the menu to get started.',
+      name: 'basket_empty_content',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Minimum order amount for delivery is £10`
+  String get basket_empty_delivery {
+    return Intl.message(
+      'Minimum order amount for delivery is £10',
+      name: 'basket_empty_delivery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Go to menu`
+  String get basket_go_to_menu {
+    return Intl.message(
+      'Go to menu',
+      name: 'basket_go_to_menu',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

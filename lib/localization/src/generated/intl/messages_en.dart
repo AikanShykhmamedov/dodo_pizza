@@ -22,6 +22,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "basket": MessageLookupByLibrary.simpleMessage("Basket"),
+        "basket_empty":
+            MessageLookupByLibrary.simpleMessage("Oops, it\'s empty here!"),
+        "basket_empty_content": MessageLookupByLibrary.simpleMessage(
+            "Your basket is empty, open the menu to get started."),
+        "basket_empty_delivery": MessageLookupByLibrary.simpleMessage(
+            "Minimum order amount for delivery is £10"),
+        "basket_go_to_menu": MessageLookupByLibrary.simpleMessage("Go to menu"),
         "contact": MessageLookupByLibrary.simpleMessage("Contact"),
         "contact_about_app":
             MessageLookupByLibrary.simpleMessage("About our App"),

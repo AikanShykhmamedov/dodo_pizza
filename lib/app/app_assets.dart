@@ -6,4 +6,6 @@ abstract class AppAssets {
   static const youtube = 'assets/images/youtube.svg';
 
   static const customerAndNumbers = 'assets/images/customer_and_numbers.svg';
+
+  static const dogAndPizzaBox = 'assets/images/dog_and_pizza_box.svg';
 }

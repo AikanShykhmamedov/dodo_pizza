@@ -10,5 +10,11 @@
   "contact_call": "Call",
   "contact_chat": "Chat",
   "contact_legal_documents": "Legal documents",
-  "contact_about_app": "About our App"
+  "contact_about_app": "About our App",
+
+  "basket": "Basket",
+  "basket_empty": "Oops, it's empty here!",
+  "basket_empty_content": "Your basket is empty, open the menu to get started.",
+  "basket_empty_delivery": "Minimum order amount for delivery is £10",
+  "basket_go_to_menu": "Go to menu"
 }
