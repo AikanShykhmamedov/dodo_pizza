@@ -1,7 +1,7 @@
 import 'package:dodo_pizza/localization/localization.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-
+import 'package:dodo_pizza/main/main.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -9,6 +9,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       localizationsDelegates: const [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -16,7 +17,7 @@ class App extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
-      home: const Placeholder(),
+      home: const MainScreen(),
     );
   }
 }

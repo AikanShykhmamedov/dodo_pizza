@@ -9,6 +9,8 @@ environment:
   sdk: '>=2.18.5 <3.0.0'
 
 dependencies:
+  dodo_icons:
+    path: packages/dodo_icons
   flutter:
     sdk: flutter
   flutter_localizations:
