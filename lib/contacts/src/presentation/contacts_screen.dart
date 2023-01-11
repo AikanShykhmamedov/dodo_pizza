@@ -7,11 +7,21 @@ import 'widgets/list_button.dart';
 import 'widgets/secondary_text_button.dart';
 import 'widgets/social_media_button.dart';
 
-class ContactsScreen extends StatelessWidget {
+class ContactsScreen extends StatefulWidget {
   const ContactsScreen({super.key});
 
   @override
+  State<ContactsScreen> createState() => _ContactsScreenState();
+}
+
+class _ContactsScreenState extends State<ContactsScreen> with AutomaticKeepAliveClientMixin {
+  @override
+  bool get wantKeepAlive => true;
+
+  @override
   Widget build(BuildContext context) {
+    super.build(context);
+
     const mapSize = 184.0;
 
     final map = Stack(
