@@ -1,0 +1,30 @@
+[
+    {
+        "id": "00000001-0000-0000-0000-000000000000",
+        "uuId": "000D3A207E3CA0F411E9C7DBB2050482",
+        "name": "Brighton",
+        "order": 1,
+        "isTop": false
+    },
+    {
+        "id": "00000002-0000-0000-0000-000000000000",
+        "uuId": "000D3A207E3CA0F411E9C7DBB20508C2",
+        "name": "Coventry",
+        "order": 2,
+        "isTop": false
+    },
+    {
+        "id": "00000007-0000-0000-0000-000000000000",
+        "uuId": "000D3A2BF1ABA95811EAF41F1389CA92",
+        "name": "Leamington Spa",
+        "order": 3,
+        "isTop": false
+    },
+    {
+        "id": "00000003-0000-0000-0000-000000000000",
+        "uuId": "000D3A207E3CA0F411E9C7DBB2050CA1",
+        "name": "Walsall Wood",
+        "order": 4,
+        "isTop": false
+    }
+]

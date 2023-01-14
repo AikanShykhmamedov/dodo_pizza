@@ -16,5 +16,10 @@
   "basket_empty": "Oops, it's empty here!",
   "basket_empty_content": "Your basket is empty, open the menu to get started.",
   "basket_empty_delivery": "Minimum order amount for delivery is £10",
-  "basket_go_to_menu": "Go to menu"
+  "basket_go_to_menu": "Go to menu",
+
+  "region_country": "Country",
+  "region_country_name": "{isoName, select, BY {Belarus} CZ {Czech Republic} DE {Germany} EE {Estonia} FI {Finland} GB {United Kingdom} KG {Kyrgyzstan} KZ {Kazakhstan} LT {Lithuania} NG {Nigeria} PL {Poland} RO {Romania} RU {Russia} SI {Slovenia} SK {Slovakia} TJ {Tajikistan} UZ {Uzbekistan} VN {Vietnam} other {}}",
+  "region_city_search_hint": "Choose your city",
+  "region_city_search_empty": "No pizza store has opened yet in this city"
 }

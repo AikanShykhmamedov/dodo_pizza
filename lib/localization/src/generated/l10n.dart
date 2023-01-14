@@ -209,6 +209,67 @@ class S {
       args: [],
     );
   }
+
+  /// `Country`
+  String get region_country {
+    return Intl.message(
+      'Country',
+      name: 'region_country',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{isoName, select, BY {Belarus} CZ {Czech Republic} DE {Germany} EE {Estonia} FI {Finland} GB {United Kingdom} KG {Kyrgyzstan} KZ {Kazakhstan} LT {Lithuania} NG {Nigeria} PL {Poland} RO {Romania} RU {Russia} SI {Slovenia} SK {Slovakia} TJ {Tajikistan} UZ {Uzbekistan} VN {Vietnam} other {}}`
+  String region_country_name(Object isoName) {
+    return Intl.select(
+      isoName,
+      {
+        'BY': 'Belarus',
+        'CZ': 'Czech Republic',
+        'DE': 'Germany',
+        'EE': 'Estonia',
+        'FI': 'Finland',
+        'GB': 'United Kingdom',
+        'KG': 'Kyrgyzstan',
+        'KZ': 'Kazakhstan',
+        'LT': 'Lithuania',
+        'NG': 'Nigeria',
+        'PL': 'Poland',
+        'RO': 'Romania',
+        'RU': 'Russia',
+        'SI': 'Slovenia',
+        'SK': 'Slovakia',
+        'TJ': 'Tajikistan',
+        'UZ': 'Uzbekistan',
+        'VN': 'Vietnam',
+        'other': '',
+      },
+      name: 'region_country_name',
+      desc: '',
+      args: [isoName],
+    );
+  }
+
+  /// `Choose your city`
+  String get region_city_search_hint {
+    return Intl.message(
+      'Choose your city',
+      name: 'region_city_search_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No pizza store has opened yet in this city`
+  String get region_city_search_empty {
+    return Intl.message(
+      'No pizza store has opened yet in this city',
+      name: 'region_city_search_empty',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

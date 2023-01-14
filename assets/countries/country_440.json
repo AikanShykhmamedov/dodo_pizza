@@ -1,0 +1,23 @@
+[
+    {
+        "id": "00000003-0000-0000-0000-000000000000",
+        "uuId": "000D3A207E3CA0F411E9C7DC88422990",
+        "name": "Vilnius",
+        "order": 1,
+        "isTop": true
+    },
+    {
+        "id": "00000004-0000-0000-0000-000000000000",
+        "uuId": "000D3A2BF1ABA95811EB309EE3B743A1",
+        "name": "Kaunas",
+        "order": 2,
+        "isTop": false
+    },
+    {
+        "id": "00000001-0000-0000-0000-000000000000",
+        "uuId": "000D3A207E3CA0F411E9C7DC884223E4",
+        "name": "Klaipėda",
+        "order": 3,
+        "isTop": false
+    }
+]

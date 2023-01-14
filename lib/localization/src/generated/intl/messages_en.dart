@@ -20,6 +20,28 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(isoName) => "${Intl.select(isoName, {
+            'BY': 'Belarus',
+            'CZ': 'Czech Republic',
+            'DE': 'Germany',
+            'EE': 'Estonia',
+            'FI': 'Finland',
+            'GB': 'United Kingdom',
+            'KG': 'Kyrgyzstan',
+            'KZ': 'Kazakhstan',
+            'LT': 'Lithuania',
+            'NG': 'Nigeria',
+            'PL': 'Poland',
+            'RO': 'Romania',
+            'RU': 'Russia',
+            'SI': 'Slovenia',
+            'SK': 'Slovakia',
+            'TJ': 'Tajikistan',
+            'UZ': 'Uzbekistan',
+            'VN': 'Vietnam',
+            'other': '',
+          })}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "basket": MessageLookupByLibrary.simpleMessage("Basket"),
@@ -46,6 +68,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile_let_get_acquainted":
             MessageLookupByLibrary.simpleMessage("Let\'s get acquainted!"),
         "profile_let_get_acquainted_content": MessageLookupByLibrary.simpleMessage(
-            "Save your delivery address and be the first one to know about our promotions")
+            "Save your delivery address and be the first one to know about our promotions"),
+        "region_city_search_empty": MessageLookupByLibrary.simpleMessage(
+            "No pizza store has opened yet in this city"),
+        "region_city_search_hint":
+            MessageLookupByLibrary.simpleMessage("Choose your city"),
+        "region_country": MessageLookupByLibrary.simpleMessage("Country"),
+        "region_country_name": m0
       };
 }

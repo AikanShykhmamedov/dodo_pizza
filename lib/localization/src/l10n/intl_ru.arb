@@ -16,5 +16,10 @@
   "basket_empty": "Ой, пусто!",
   "basket_empty_content": "Ваша корзина пуста, добавьте\nпонравившийся товар из «Меню».",
   "basket_empty_delivery": "Мы доставим ваш заказ от 549 ₽",
-  "basket_go_to_menu": "Перейти в меню"
+  "basket_go_to_menu": "Перейти в меню",
+
+  "region_country": "Страна",
+  "region_country_name": "{isoName, select, BY {Беларусь} CZ {Чехия} DE {Германия} EE {Эстония} FI {Финляндия} GB {Великобритания} KG {Кыргызстан} KZ {Казахстан} LT {Литва} NG {Нигерия} PL {Польша} RO {Румыния} RU {Россия} SI {Словения} SK {Словакия} TJ {Таджикистан} UZ {Узбекистан} VN {Вьетнам} other {}}",
+  "region_city_search_hint": "Найти город",
+  "region_city_search_empty": "Пиццерия в этом городе\nеще не открылась"
 }

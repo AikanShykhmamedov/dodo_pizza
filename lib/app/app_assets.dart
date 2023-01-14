@@ -8,4 +8,7 @@ abstract class AppAssets {
   static const customerAndNumbers = 'assets/images/customer_and_numbers.svg';
 
   static const dogAndPizzaBox = 'assets/images/dog_and_pizza_box.svg';
+
+  static const countries = 'assets/countries/countries.json';
+  static String countryCities(int countryCode) => 'assets/countries/country_$countryCode.json';
 }

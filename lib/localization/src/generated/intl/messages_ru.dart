@@ -20,6 +20,28 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ru';
 
+  static String m0(isoName) => "${Intl.select(isoName, {
+            'BY': 'Беларусь',
+            'CZ': 'Чехия',
+            'DE': 'Германия',
+            'EE': 'Эстония',
+            'FI': 'Финляндия',
+            'GB': 'Великобритания',
+            'KG': 'Кыргызстан',
+            'KZ': 'Казахстан',
+            'LT': 'Литва',
+            'NG': 'Нигерия',
+            'PL': 'Польша',
+            'RO': 'Румыния',
+            'RU': 'Россия',
+            'SI': 'Словения',
+            'SK': 'Словакия',
+            'TJ': 'Таджикистан',
+            'UZ': 'Узбекистан',
+            'VN': 'Вьетнам',
+            'other': '',
+          })}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "basket": MessageLookupByLibrary.simpleMessage("Корзина"),
@@ -47,6 +69,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile_let_get_acquainted":
             MessageLookupByLibrary.simpleMessage("Давайте знакомиться!"),
         "profile_let_get_acquainted_content": MessageLookupByLibrary.simpleMessage(
-            "Подарим подарок на день рождения,\nсохраним адрес доставки\nи расскажем об акциях")
+            "Подарим подарок на день рождения,\nсохраним адрес доставки\nи расскажем об акциях"),
+        "region_city_search_empty": MessageLookupByLibrary.simpleMessage(
+            "Пиццерия в этом городе\nеще не открылась"),
+        "region_city_search_hint":
+            MessageLookupByLibrary.simpleMessage("Найти город"),
+        "region_country": MessageLookupByLibrary.simpleMessage("Страна"),
+        "region_country_name": m0
       };
 }
