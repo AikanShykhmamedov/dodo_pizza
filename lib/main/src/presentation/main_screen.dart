@@ -1,40 +1,14 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:dodo_icons/dodo_icons.dart';
-import 'package:dodo_pizza/basket/basket.dart';
-import 'package:dodo_pizza/contacts/contacts.dart';
+import 'package:dodo_pizza/app/app_router.dart';
 import 'package:dodo_pizza/localization/localization.dart';
-import 'package:dodo_pizza/profile/profile.dart';
 import 'package:flutter/material.dart';
 
-class MainScreen extends StatefulWidget {
+class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
 
   @override
-  State<MainScreen> createState() => _MainScreenState();
-}
-
-class _MainScreenState extends State<MainScreen> {
-  final _pageController = PageController();
-
-  final _screens = const [
-    ProfileScreen(),
-    ContactsScreen(),
-    BasketScreen(),
-  ];
-
-  @override
-  void dispose() {
-    _pageController.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    final pageView = PageView(
-      controller: _pageController,
-      physics: const NeverScrollableScrollPhysics(),
-      children: _screens,
-    );
-
     final navigationBarItems = [
       BottomNavigationBarItem(
         icon: const DodoIcon(
@@ -71,24 +45,19 @@ class _MainScreenState extends State<MainScreen> {
       ),
     ];
 
-    final navigationBar = AnimatedBuilder(
-      animation: _pageController,
-      builder: (context, _) {
+    return AutoTabsScaffold(
+      routes: const [
+        ProfileRoute(),
+        ContactsRoute(),
+        BasketRoute(),
+      ],
+      bottomNavigationBuilder: (_, tabsRouter) {
         return BottomNavigationBar(
           items: navigationBarItems,
-          currentIndex: _pageController.page?.round() ?? 0,
-          onTap: _onNavigationBarItemPressed,
+          currentIndex: tabsRouter.activeIndex,
+          onTap: tabsRouter.setActiveIndex,
         );
       },
     );
-
-    return Scaffold(
-      body: pageView,
-      bottomNavigationBar: navigationBar,
-    );
-  }
-
-  void _onNavigationBarItemPressed(int index) {
-    _pageController.jumpToPage(index);
   }
 }

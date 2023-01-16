@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:dodo_pizza/localization/localization.dart';
 import 'package:flutter/material.dart';
 
@@ -8,21 +9,12 @@ import 'widgets/countries_list.dart';
 class CountriesScreen extends StatefulWidget {
   const CountriesScreen({
     super.key,
-    required this.canPop,
+    this.canPop = true,
     this.repository = const RegionRepository(),
   });
 
   final bool canPop;
   final RegionRepository repository;
-
-  static PageRoute<Country> route({bool canPop = true}) {
-    return MaterialPageRoute(
-      builder: (_) => CountriesScreen(
-        canPop: canPop,
-      ),
-      fullscreenDialog: true,
-    );
-  }
 
   @override
   State<CountriesScreen> createState() => _CountriesScreenState();
@@ -73,6 +65,6 @@ class _CountriesScreenState extends State<CountriesScreen> {
   }
 
   void _onCountryPressed(Country country) {
-    Navigator.pop<Country>(context, country);
+    context.router.popForced<Country>(country);
   }
 }

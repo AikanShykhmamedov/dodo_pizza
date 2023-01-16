@@ -1,5 +1,6 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:dodo_pizza/app/app_assets.dart';
-import 'package:dodo_pizza/main/main.dart';
+import 'package:dodo_pizza/app/app_router.dart';
 import 'package:dodo_pizza/region/region.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -27,10 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
       }
 
       if (mounted) {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (_) => const MainScreen()),
-        );
+        context.replaceRoute(const MainRoute());
       }
     });
   }

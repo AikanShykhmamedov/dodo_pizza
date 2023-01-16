@@ -11,5 +11,5 @@ void main() async {
     storageDirectory: await getTemporaryDirectory(),
   );
 
-  runApp(const App());
+  runApp(App());
 }

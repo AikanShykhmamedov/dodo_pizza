@@ -1,3 +1,5 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:dodo_pizza/app/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -6,7 +8,6 @@ import '../models/city.dart';
 import '../models/country.dart';
 import '../models/region.dart';
 import '../repositories/region_repository.dart';
-import 'countries_screen.dart';
 import 'widgets/cities_app_bar.dart';
 import 'widgets/cities_list.dart';
 import 'widgets/filtered_cities_list.dart';
@@ -22,19 +23,6 @@ class CitiesScreen extends StatefulWidget {
   final Country country;
   final City? city;
   final RegionRepository repository;
-
-  static PageRoute<Region> route({
-    required Country country,
-    required City? city,
-  }) {
-    return MaterialPageRoute(
-      builder: (_) => CitiesScreen(
-        country: country,
-        city: city,
-      ),
-      fullscreenDialog: true,
-    );
-  }
 
   @override
   State<CitiesScreen> createState() => _CitiesScreenState();
@@ -114,7 +102,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
   }
 
   void _onCountryPressed() async {
-    final country = await Navigator.push<Country>(context, CountriesScreen.route());
+    final country = await context.pushRoute<Country>(CountriesRoute());
 
     if (country != null) {
       _citiesBloc.add(CitiesEvent.setCountry(country: country));
@@ -127,6 +115,6 @@ class _CitiesScreenState extends State<CitiesScreen> {
       city: city,
     );
 
-    Navigator.pop<Region>(context, region);
+    context.router.popForced<Region>(region);
   }
 }
