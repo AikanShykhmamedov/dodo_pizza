@@ -20,7 +20,22 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m0(isoName) => "${Intl.select(isoName, {
+  static String m0(category) => "${Intl.select(category, {
+            'pizza': 'Pizza',
+            'combo': 'Combo',
+            'snacks': 'Snacks',
+            'desserts': 'Desserts',
+            'drinks': 'Drinks',
+            'sauces': 'Sauces',
+            'goods': 'Goods',
+            'other': '',
+          })}";
+
+  static String m1(value) => "from £${value}";
+
+  static String m2(value) => "£${value}";
+
+  static String m3(isoName) => "${Intl.select(isoName, {
             'BY': 'Belarus',
             'CZ': 'Czech Republic',
             'DE': 'Germany',
@@ -62,6 +77,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "contact_map": MessageLookupByLibrary.simpleMessage("See the map"),
         "contact_support":
             MessageLookupByLibrary.simpleMessage("Contact support"),
+        "menu": MessageLookupByLibrary.simpleMessage("Menu"),
+        "menu_category_name": m0,
+        "menu_price_from_count": m1,
+        "price_count": m2,
+        "price_pattern": MessageLookupByLibrary.simpleMessage("0.00"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "profile_enter_phone_number":
             MessageLookupByLibrary.simpleMessage("Enter the phone number"),
@@ -74,6 +94,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "region_city_search_hint":
             MessageLookupByLibrary.simpleMessage("Choose your city"),
         "region_country": MessageLookupByLibrary.simpleMessage("Country"),
-        "region_country_name": m0
+        "region_country_name": m3
       };
 }

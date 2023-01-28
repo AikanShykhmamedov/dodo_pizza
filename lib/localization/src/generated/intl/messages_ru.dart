@@ -20,7 +20,22 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ru';
 
-  static String m0(isoName) => "${Intl.select(isoName, {
+  static String m0(category) => "${Intl.select(category, {
+            'pizza': 'Пицца',
+            'combo': 'Комбо',
+            'snacks': 'Закуски',
+            'desserts': 'Десерты',
+            'drinks': 'Напитки',
+            'sauces': 'Соусы',
+            'goods': 'Другие товары',
+            'other': '',
+          })}";
+
+  static String m1(value) => "от ${value} ₽";
+
+  static String m2(value) => "${value} ₽";
+
+  static String m3(isoName) => "${Intl.select(isoName, {
             'BY': 'Беларусь',
             'CZ': 'Чехия',
             'DE': 'Германия',
@@ -63,6 +78,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Пиццерии на карте"),
         "contact_support":
             MessageLookupByLibrary.simpleMessage("Связаться с поддержкой"),
+        "menu": MessageLookupByLibrary.simpleMessage("Меню"),
+        "menu_category_name": m0,
+        "menu_price_from_count": m1,
+        "price_count": m2,
+        "price_pattern": MessageLookupByLibrary.simpleMessage("0"),
         "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
         "profile_enter_phone_number":
             MessageLookupByLibrary.simpleMessage("Указать телефон"),
@@ -75,6 +95,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "region_city_search_hint":
             MessageLookupByLibrary.simpleMessage("Найти город"),
         "region_country": MessageLookupByLibrary.simpleMessage("Страна"),
-        "region_country_name": m0
+        "region_country_name": m3
       };
 }

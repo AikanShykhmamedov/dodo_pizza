@@ -1,6 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -48,6 +49,46 @@ class S {
 
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
+  }
+
+  /// `Menu`
+  String get menu {
+    return Intl.message(
+      'Menu',
+      name: 'menu',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{category, select, pizza {Pizza} combo {Combo} snacks {Snacks} desserts {Desserts} drinks {Drinks} sauces {Sauces} goods {Goods} other {}}`
+  String menu_category_name(Object category) {
+    return Intl.select(
+      category,
+      {
+        'pizza': 'Pizza',
+        'combo': 'Combo',
+        'snacks': 'Snacks',
+        'desserts': 'Desserts',
+        'drinks': 'Drinks',
+        'sauces': 'Sauces',
+        'goods': 'Goods',
+        'other': '',
+      },
+      name: 'menu_category_name',
+      desc: '',
+      args: [category],
+    );
+  }
+
+  /// `from £{value}`
+  String menu_price_from_count(Object value) {
+    return Intl.message(
+      'from £$value',
+      name: 'menu_price_from_count',
+      desc: '',
+      args: [value],
+    );
   }
 
   /// `Profile`
@@ -266,6 +307,26 @@ class S {
     return Intl.message(
       'No pizza store has opened yet in this city',
       name: 'region_city_search_empty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `£{value}`
+  String price_count(Object value) {
+    return Intl.message(
+      '£$value',
+      name: 'price_count',
+      desc: '',
+      args: [value],
+    );
+  }
+
+  /// `0.00`
+  String get price_pattern {
+    return Intl.message(
+      '0.00',
+      name: 'price_pattern',
       desc: '',
       args: [],
     );

@@ -1,6 +1,8 @@
 abstract class AppAssets {
   static const splashPattern = 'assets/images/splash_pattern.png';
 
+  static const productPlaceholder = 'assets/images/product_placeholder.svg';
+
   static const map = 'assets/images/map.svg';
   static const vk = 'assets/images/vk.svg';
   static const youtube = 'assets/images/youtube.svg';
@@ -10,5 +12,9 @@ abstract class AppAssets {
   static const dogAndPizzaBox = 'assets/images/dog_and_pizza_box.svg';
 
   static const countries = 'assets/countries/countries.json';
+
   static String countryCities(int countryCode) => 'assets/countries/country_$countryCode.json';
+
+  static const menuRu = 'assets/menu/ru.json';
+  static const menuUk = 'assets/menu/uk.json';
 }

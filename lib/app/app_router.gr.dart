@@ -24,7 +24,8 @@ class _$AppRouter extends RootStackRouter {
       );
     },
     CountriesRoute.name: (routeData) {
-      final args = routeData.argsAs<CountriesRouteArgs>(orElse: () => const CountriesRouteArgs());
+      final args = routeData.argsAs<CountriesRouteArgs>(
+          orElse: () => const CountriesRouteArgs());
       return MaterialPageX<Country>(
         routeData: routeData,
         child: CountriesScreen(
@@ -52,6 +53,12 @@ class _$AppRouter extends RootStackRouter {
       return MaterialPageX<dynamic>(
         routeData: routeData,
         child: const MainScreen(),
+      );
+    },
+    MenuRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const MenuScreen(),
       );
     },
     ProfileRoute.name: (routeData) {
@@ -92,6 +99,11 @@ class _$AppRouter extends RootStackRouter {
           MainRoute.name,
           path: '/main',
           children: [
+            RouteConfig(
+              MenuRoute.name,
+              path: 'menu',
+              parent: MainRoute.name,
+            ),
             RouteConfig(
               ProfileRoute.name,
               path: 'profile',
@@ -218,6 +230,18 @@ class MainRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'MainRoute';
+}
+
+/// generated route for
+/// [MenuScreen]
+class MenuRoute extends PageRouteInfo<void> {
+  const MenuRoute()
+      : super(
+          MenuRoute.name,
+          path: 'menu',
+        );
+
+  static const String name = 'MenuRoute';
 }
 
 /// generated route for

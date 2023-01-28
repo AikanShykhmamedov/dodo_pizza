@@ -1,4 +1,8 @@
 {
+  "menu": "Меню",
+  "menu_category_name": "{category, select, pizza {Пицца} combo {Комбо} snacks {Закуски} desserts {Десерты} drinks {Напитки} sauces {Соусы} goods {Другие товары} other {}}",
+  "menu_price_from_count": "от {value} ₽",
+
   "profile": "Профиль",
   "profile_let_get_acquainted": "Давайте знакомиться!",
   "profile_let_get_acquainted_content": "Подарим подарок на день рождения,\nсохраним адрес доставки\nи расскажем об акциях",
@@ -21,5 +25,9 @@
   "region_country": "Страна",
   "region_country_name": "{isoName, select, BY {Беларусь} CZ {Чехия} DE {Германия} EE {Эстония} FI {Финляндия} GB {Великобритания} KG {Кыргызстан} KZ {Казахстан} LT {Литва} NG {Нигерия} PL {Польша} RO {Румыния} RU {Россия} SI {Словения} SK {Словакия} TJ {Таджикистан} UZ {Узбекистан} VN {Вьетнам} other {}}",
   "region_city_search_hint": "Найти город",
-  "region_city_search_empty": "Пиццерия в этом городе\nеще не открылась"
+  "region_city_search_empty": "Пиццерия в этом городе\nеще не открылась",
+
+  "price_count": "{value} ₽",
+
+  "price_pattern": "0"
 }

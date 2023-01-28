@@ -1,4 +1,8 @@
 {
+  "menu": "Menu",
+  "menu_category_name": "{category, select, pizza {Pizza} combo {Combo} snacks {Snacks} desserts {Desserts} drinks {Drinks} sauces {Sauces} goods {Goods} other {}}",
+  "menu_price_from_count": "from £{value}",
+
   "profile": "Profile",
   "profile_let_get_acquainted": "Let's get acquainted!",
   "profile_let_get_acquainted_content": "Save your delivery address and be the first one to know about our promotions",
@@ -21,5 +25,9 @@
   "region_country": "Country",
   "region_country_name": "{isoName, select, BY {Belarus} CZ {Czech Republic} DE {Germany} EE {Estonia} FI {Finland} GB {United Kingdom} KG {Kyrgyzstan} KZ {Kazakhstan} LT {Lithuania} NG {Nigeria} PL {Poland} RO {Romania} RU {Russia} SI {Slovenia} SK {Slovakia} TJ {Tajikistan} UZ {Uzbekistan} VN {Vietnam} other {}}",
   "region_city_search_hint": "Choose your city",
-  "region_city_search_empty": "No pizza store has opened yet in this city"
+  "region_city_search_empty": "No pizza store has opened yet in this city",
+
+  "price_count": "£{value}",
+
+  "price_pattern": "0.00"
 }

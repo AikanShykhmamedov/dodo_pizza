@@ -12,6 +12,17 @@ class MainScreen extends StatelessWidget {
     final navigationBarItems = [
       BottomNavigationBarItem(
         icon: const DodoIcon(
+          icon: DodoIcons.menuInactive,
+          size: 30,
+        ),
+        activeIcon: const DodoIcon(
+          icon: DodoIcons.menuActive,
+          size: 30,
+        ),
+        label: S.of(context).menu,
+      ),
+      BottomNavigationBarItem(
+        icon: const DodoIcon(
           icon: DodoIcons.profileInactive,
           size: 30,
         ),
@@ -47,6 +58,7 @@ class MainScreen extends StatelessWidget {
 
     return AutoTabsScaffold(
       routes: const [
+        MenuRoute(),
         ProfileRoute(),
         ContactsRoute(),
         BasketRoute(),
