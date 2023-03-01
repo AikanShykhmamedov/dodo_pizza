@@ -1,7 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -86,6 +85,248 @@ class S {
     return Intl.message(
       'from £$value',
       name: 'menu_price_from_count',
+      desc: '',
+      args: [value],
+    );
+  }
+
+  /// `Add to basket`
+  String get menu_offer_add_basket {
+    return Intl.message(
+      'Add to basket',
+      name: 'menu_offer_add_basket',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add to basket for £{value}`
+  String menu_offer_add_basket_for_count(Object value) {
+    return Intl.message(
+      'Add to basket for £$value',
+      name: 'menu_offer_add_basket_for_count',
+      desc: '',
+      args: [value],
+    );
+  }
+
+  /// `Add to taste`
+  String get menu_offer_add_taste {
+    return Intl.message(
+      'Add to taste',
+      name: 'menu_offer_add_taste',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{value} g`
+  String menu_offer_weight_count(Object value) {
+    return Intl.message(
+      '$value g',
+      name: 'menu_offer_weight_count',
+      desc: '',
+      args: [value],
+    );
+  }
+
+  /// `{value} l`
+  String menu_offer_volume_count(Object value) {
+    return Intl.message(
+      '$value l',
+      name: 'menu_offer_volume_count',
+      desc: '',
+      args: [value],
+    );
+  }
+
+  /// `{value} pcs.`
+  String menu_offer_piece_count(Object value) {
+    return Intl.message(
+      '$value pcs.',
+      name: 'menu_offer_piece_count',
+      desc: '',
+      args: [value],
+    );
+  }
+
+  /// `{diameter, select, small {Small} medium {Medium} large {Large} other {}}`
+  String menu_offer_diameter_name(Object diameter) {
+    return Intl.select(
+      diameter,
+      {
+        'small': 'Small',
+        'medium': 'Medium',
+        'large': 'Large',
+        'other': '',
+      },
+      name: 'menu_offer_diameter_name',
+      desc: '',
+      args: [diameter],
+    );
+  }
+
+  /// `{diameter, select, small {Small} medium {Medium} large {Large} other {}}`
+  String menu_offer_diameter_full_name(Object diameter) {
+    return Intl.select(
+      diameter,
+      {
+        'small': 'Small',
+        'medium': 'Medium',
+        'large': 'Large',
+        'other': '',
+      },
+      name: 'menu_offer_diameter_full_name',
+      desc: '',
+      args: [diameter],
+    );
+  }
+
+  /// `{dough, select, original {Original} thin {Thin} other {}}`
+  String menu_offer_dough_name(Object dough) {
+    return Intl.select(
+      dough,
+      {
+        'original': 'Original',
+        'thin': 'Thin',
+        'other': '',
+      },
+      name: 'menu_offer_dough_name',
+      desc: '',
+      args: [dough],
+    );
+  }
+
+  /// `{dough, select, original {Original crust} thin {Thin crust} other {}}`
+  String menu_offer_dough_full_name(Object dough) {
+    return Intl.select(
+      dough,
+      {
+        'original': 'Original crust',
+        'thin': 'Thin crust',
+        'other': '',
+      },
+      name: 'menu_offer_dough_full_name',
+      desc: '',
+      args: [dough],
+    );
+  }
+
+  /// `Remove ingredients`
+  String get menu_offer_remove_ingredients {
+    return Intl.message(
+      'Remove ingredients',
+      name: 'menu_offer_remove_ingredients',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset`
+  String get menu_offer_remove_ingredients_dialog_reset {
+    return Intl.message(
+      'Reset',
+      name: 'menu_offer_remove_ingredients_dialog_reset',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Done`
+  String get menu_offer_remove_ingredients_dialog_done {
+    return Intl.message(
+      'Done',
+      name: 'menu_offer_remove_ingredients_dialog_done',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change`
+  String get menu_offer_combo_slot_change {
+    return Intl.message(
+      'Change',
+      name: 'menu_offer_combo_slot_change',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nutrition facts (per 100 g)`
+  String get menu_food_value_nutrition_facts {
+    return Intl.message(
+      'Nutrition facts (per 100 g)',
+      name: 'menu_food_value_nutrition_facts',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Calories`
+  String get menu_food_value_calories {
+    return Intl.message(
+      'Calories',
+      name: 'menu_food_value_calories',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Proteins`
+  String get menu_food_value_proteins {
+    return Intl.message(
+      'Proteins',
+      name: 'menu_food_value_proteins',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fats`
+  String get menu_food_value_fats {
+    return Intl.message(
+      'Fats',
+      name: 'menu_food_value_fats',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Carbohydrates`
+  String get menu_food_value_carbohydrates {
+    return Intl.message(
+      'Carbohydrates',
+      name: 'menu_food_value_carbohydrates',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Weight`
+  String get menu_food_value_weight {
+    return Intl.message(
+      'Weight',
+      name: 'menu_food_value_weight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{value} kcal`
+  String menu_food_value_kcal_value(Object value) {
+    return Intl.message(
+      '$value kcal',
+      name: 'menu_food_value_kcal_value',
+      desc: '',
+      args: [value],
+    );
+  }
+
+  /// `{value} g`
+  String menu_food_value_grams_value(Object value) {
+    return Intl.message(
+      '$value g',
+      name: 'menu_food_value_grams_value',
       desc: '',
       args: [value],
     );
@@ -317,6 +558,16 @@ class S {
     return Intl.message(
       '£$value',
       name: 'price_count',
+      desc: '',
+      args: [value],
+    );
+  }
+
+  /// `+£{value}`
+  String extra_price_count(Object value) {
+    return Intl.message(
+      '+£$value',
+      name: 'extra_price_count',
       desc: '',
       args: [value],
     );

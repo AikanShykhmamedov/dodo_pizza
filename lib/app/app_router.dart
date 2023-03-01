@@ -50,6 +50,10 @@ part 'app_router.gr.dart';
         ),
       ],
     ),
+    AutoRoute(
+      page: MenuOfferScreen,
+      path: '/main/menu/offer',
+    ),
   ],
 )
 class AppRouter extends _$AppRouter {}

@@ -2,6 +2,28 @@
   "menu": "Menu",
   "menu_category_name": "{category, select, pizza {Pizza} combo {Combo} snacks {Snacks} desserts {Desserts} drinks {Drinks} sauces {Sauces} goods {Goods} other {}}",
   "menu_price_from_count": "from £{value}",
+  "menu_offer_add_basket": "Add to basket",
+  "menu_offer_add_basket_for_count": "Add to basket for £{value}",
+  "menu_offer_add_taste": "Add to taste",
+  "menu_offer_weight_count": "{value} g",
+  "menu_offer_volume_count": "{value} l",
+  "menu_offer_piece_count": "{value} pcs.",
+  "menu_offer_diameter_name": "{diameter, select, small {Small} medium {Medium} large {Large} other {}}",
+  "menu_offer_diameter_full_name": "{diameter, select, small {Small} medium {Medium} large {Large} other {}}",
+  "menu_offer_dough_name": "{dough, select, original {Original} thin {Thin} other {}}",
+  "menu_offer_dough_full_name": "{dough, select, original {Original crust} thin {Thin crust} other {}}",
+  "menu_offer_remove_ingredients": "Remove ingredients",
+  "menu_offer_remove_ingredients_dialog_reset": "Reset",
+  "menu_offer_remove_ingredients_dialog_done": "Done",
+  "menu_offer_combo_slot_change": "Change",
+  "menu_food_value_nutrition_facts": "Nutrition facts (per 100 g)",
+  "menu_food_value_calories": "Calories",
+  "menu_food_value_proteins": "Proteins",
+  "menu_food_value_fats": "Fats",
+  "menu_food_value_carbohydrates": "Carbohydrates",
+  "menu_food_value_weight": "Weight",
+  "menu_food_value_kcal_value": "{value} kcal",
+  "menu_food_value_grams_value": "{value} g",
 
   "profile": "Profile",
   "profile_let_get_acquainted": "Let's get acquainted!",
@@ -28,6 +50,7 @@
   "region_city_search_empty": "No pizza store has opened yet in this city",
 
   "price_count": "£{value}",
+  "extra_price_count": "+£{value}",
 
   "price_pattern": "0.00"
 }

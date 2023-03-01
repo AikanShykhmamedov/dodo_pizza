@@ -55,6 +55,16 @@ class _$AppRouter extends RootStackRouter {
         child: const MainScreen(),
       );
     },
+    MenuOfferRoute.name: (routeData) {
+      final args = routeData.argsAs<MenuOfferRouteArgs>();
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: MenuOfferScreen(
+          key: args.key,
+          offerId: args.offerId,
+        ),
+      );
+    },
     MenuRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
@@ -120,6 +130,10 @@ class _$AppRouter extends RootStackRouter {
               parent: MainRoute.name,
             ),
           ],
+        ),
+        RouteConfig(
+          MenuOfferRoute.name,
+          path: '/main/menu/offer',
         ),
       ];
 }
@@ -230,6 +244,40 @@ class MainRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'MainRoute';
+}
+
+/// generated route for
+/// [MenuOfferScreen]
+class MenuOfferRoute extends PageRouteInfo<MenuOfferRouteArgs> {
+  MenuOfferRoute({
+    Key? key,
+    required String offerId,
+  }) : super(
+          MenuOfferRoute.name,
+          path: '/main/menu/offer',
+          args: MenuOfferRouteArgs(
+            key: key,
+            offerId: offerId,
+          ),
+        );
+
+  static const String name = 'MenuOfferRoute';
+}
+
+class MenuOfferRouteArgs {
+  const MenuOfferRouteArgs({
+    this.key,
+    required this.offerId,
+  });
+
+  final Key? key;
+
+  final String offerId;
+
+  @override
+  String toString() {
+    return 'MenuOfferRouteArgs{key: $key, offerId: $offerId}';
+  }
 }
 
 /// generated route for

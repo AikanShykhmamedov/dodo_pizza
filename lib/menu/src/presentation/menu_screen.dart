@@ -1,6 +1,8 @@
 import 'dart:math';
 
+import 'package:auto_route/auto_route.dart';
 import 'package:dodo_pizza/app/app_colors.dart';
+import 'package:dodo_pizza/app/app_router.dart';
 import 'package:dodo_pizza/localization/localization.dart';
 import 'package:dodo_pizza/region/region.dart';
 import 'package:flutter/material.dart';
@@ -128,14 +130,18 @@ class _MenuScreenState extends State<MenuScreen> {
           fullPrice = S.of(context).preformatPrice(combo.fullPrice, (s) => s.price_count);
         }
 
+        final onPricePressed = offer.shoppingItems.length == 1 && !offer.isCombo
+            ? () {}
+            : () => _onOfferPressed(context, offer.id);
+
         final item = MenuOfferItem(
-          onPressed: () {},
+          onPressed: () => _onOfferPressed(context, offer.id),
           imageUrl: offer.imageUrl,
           name: offer.name,
           description: offer.description,
           price: price,
           fullPrice: fullPrice,
-          onPricePressed: () {},
+          onPricePressed: onPricePressed,
           isPromoted: i == 0,
         );
 
@@ -164,5 +170,9 @@ class _MenuScreenState extends State<MenuScreen> {
 
   void _onCategorySelected(int index) {
     _currentCategoryIndex.value = index;
+  }
+
+  void _onOfferPressed(BuildContext context, String offerId) {
+    context.pushRoute(MenuOfferRoute(offerId: offerId));
   }
 }

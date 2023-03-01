@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ru';
 
-  static String m0(category) => "${Intl.select(category, {
+  static String m0(value) => "+${value} ₽";
+
+  static String m1(category) => "${Intl.select(category, {
             'pizza': 'Пицца',
             'combo': 'Комбо',
             'snacks': 'Закуски',
@@ -31,11 +33,49 @@ class MessageLookup extends MessageLookupByLibrary {
             'other': '',
           })}";
 
-  static String m1(value) => "от ${value} ₽";
+  static String m2(value) => "${value} г";
 
-  static String m2(value) => "${value} ₽";
+  static String m3(value) => "${value} ккал";
 
-  static String m3(isoName) => "${Intl.select(isoName, {
+  static String m4(value) => "В корзину за ${value} ₽";
+
+  static String m5(diameter) => "${Intl.select(diameter, {
+            'small': 'Маленькая 25 см',
+            'medium': 'Средняя 30 см',
+            'large': 'Большая 35 см',
+            'other': '',
+          })}";
+
+  static String m6(diameter) => "${Intl.select(diameter, {
+            'small': 'Маленькая',
+            'medium': 'Средняя',
+            'large': 'Большая',
+            'other': '',
+          })}";
+
+  static String m7(dough) => "${Intl.select(dough, {
+            'original': 'Традиционное тесто',
+            'thin': 'Тонкое тесто',
+            'other': '',
+          })}";
+
+  static String m8(dough) => "${Intl.select(dough, {
+            'original': 'Традиционное',
+            'thin': 'Тонкое',
+            'other': '',
+          })}";
+
+  static String m9(value) => "${value} шт.";
+
+  static String m10(value) => "${value} л";
+
+  static String m11(value) => "${value} г";
+
+  static String m12(value) => "от ${value} ₽";
+
+  static String m13(value) => "${value} ₽";
+
+  static String m14(isoName) => "${Intl.select(isoName, {
             'BY': 'Беларусь',
             'CZ': 'Чехия',
             'DE': 'Германия',
@@ -78,10 +118,43 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Пиццерии на карте"),
         "contact_support":
             MessageLookupByLibrary.simpleMessage("Связаться с поддержкой"),
+        "extra_price_count": m0,
         "menu": MessageLookupByLibrary.simpleMessage("Меню"),
-        "menu_category_name": m0,
-        "menu_price_from_count": m1,
-        "price_count": m2,
+        "menu_category_name": m1,
+        "menu_food_value_calories":
+            MessageLookupByLibrary.simpleMessage("Энерг. ценность"),
+        "menu_food_value_carbohydrates":
+            MessageLookupByLibrary.simpleMessage("Углеводы"),
+        "menu_food_value_fats": MessageLookupByLibrary.simpleMessage("Жиры"),
+        "menu_food_value_grams_value": m2,
+        "menu_food_value_kcal_value": m3,
+        "menu_food_value_nutrition_facts":
+            MessageLookupByLibrary.simpleMessage("Пищевая ценность на 100 г"),
+        "menu_food_value_proteins":
+            MessageLookupByLibrary.simpleMessage("Белки"),
+        "menu_food_value_weight": MessageLookupByLibrary.simpleMessage("Вес"),
+        "menu_offer_add_basket":
+            MessageLookupByLibrary.simpleMessage("В корзину"),
+        "menu_offer_add_basket_for_count": m4,
+        "menu_offer_add_taste":
+            MessageLookupByLibrary.simpleMessage("Добавить по вкусу"),
+        "menu_offer_combo_slot_change":
+            MessageLookupByLibrary.simpleMessage("Заменить"),
+        "menu_offer_diameter_full_name": m5,
+        "menu_offer_diameter_name": m6,
+        "menu_offer_dough_full_name": m7,
+        "menu_offer_dough_name": m8,
+        "menu_offer_piece_count": m9,
+        "menu_offer_remove_ingredients":
+            MessageLookupByLibrary.simpleMessage("Убрать ингредиенты"),
+        "menu_offer_remove_ingredients_dialog_done":
+            MessageLookupByLibrary.simpleMessage("Готово"),
+        "menu_offer_remove_ingredients_dialog_reset":
+            MessageLookupByLibrary.simpleMessage("Сбросить"),
+        "menu_offer_volume_count": m10,
+        "menu_offer_weight_count": m11,
+        "menu_price_from_count": m12,
+        "price_count": m13,
         "price_pattern": MessageLookupByLibrary.simpleMessage("0"),
         "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
         "profile_enter_phone_number":
@@ -95,6 +168,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "region_city_search_hint":
             MessageLookupByLibrary.simpleMessage("Найти город"),
         "region_country": MessageLookupByLibrary.simpleMessage("Страна"),
-        "region_country_name": m3
+        "region_country_name": m14
       };
 }

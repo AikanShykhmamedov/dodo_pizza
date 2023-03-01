@@ -76,6 +76,25 @@ class SingleProduct extends Product {
 
   Map<String, dynamic> toJson() => _$SingleProductToJson(this);
 
+  num getToppingsPrice(Set<String> selectedIds) {
+    num price = 0;
+
+    final ids = selectedIds.toSet();
+
+    for (final topping in toppings) {
+      final didRemove = ids.remove(topping.id);
+      if (didRemove) {
+        price += topping.price;
+      }
+
+      if (ids.isEmpty) {
+        break;
+      }
+    }
+
+    return price;
+  }
+
   @override
   List<Object?> get props => super.props
     ..addAll([
