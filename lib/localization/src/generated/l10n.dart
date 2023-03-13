@@ -252,6 +252,77 @@ class S {
     );
   }
 
+  /// `{currentPage} of {pagesCount}`
+  String menu_offer_combo_slot_dialog_page_of(
+      Object currentPage, Object pagesCount) {
+    return Intl.message(
+      '$currentPage of $pagesCount',
+      name: 'menu_offer_combo_slot_dialog_page_of',
+      desc: '',
+      args: [currentPage, pagesCount],
+    );
+  }
+
+  /// `Change composition`
+  String get menu_offer_combo_slot_product_card_change_composition {
+    return Intl.message(
+      'Change composition',
+      name: 'menu_offer_combo_slot_product_card_change_composition',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Can be removed`
+  String get menu_offer_combo_slot_product_card_change_ingredients {
+    return Intl.message(
+      'Can be removed',
+      name: 'menu_offer_combo_slot_product_card_change_ingredients',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add to deal`
+  String get menu_offer_combo_slot_product_card_add_deal {
+    return Intl.message(
+      'Add to deal',
+      name: 'menu_offer_combo_slot_product_card_add_deal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get menu_offer_combo_slot_product_card_cancel {
+    return Intl.message(
+      'Cancel',
+      name: 'menu_offer_combo_slot_product_card_cancel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get menu_offer_combo_slot_product_card_save {
+    return Intl.message(
+      'Save',
+      name: 'menu_offer_combo_slot_product_card_save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Selected`
+  String get menu_offer_combo_slot_product_card_selected {
+    return Intl.message(
+      'Selected',
+      name: 'menu_offer_combo_slot_product_card_selected',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Nutrition facts (per 100 g)`
   String get menu_food_value_nutrition_facts {
     return Intl.message(

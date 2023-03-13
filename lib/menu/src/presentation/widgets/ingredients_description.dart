@@ -4,23 +4,35 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../../models/ingredient.dart';
+import '../../models/topping.dart';
 
 class IngredientsDescription extends StatelessWidget {
   const IngredientsDescription({
     super.key,
     required this.ingredients,
     required this.removedIngredients,
+    this.selectedToppings = const {},
+    this.textAlign,
+    this.style,
   });
 
   final Set<Ingredient> ingredients;
   final Set<Ingredient> removedIngredients;
+  final Set<Topping> selectedToppings;
+  final TextStyle? style;
+  final TextAlign? textAlign;
 
   @override
   Widget build(BuildContext context) {
-    final secondaryTextColor = Theme.of(context).extension<AppColors>()!.textSecondary;
-    final textStyle = Theme.of(context).textTheme.bodyMedium!.copyWith(
-          color: secondaryTextColor,
-        );
+    final TextStyle textStyle;
+    if (style != null) {
+      textStyle = style!;
+    } else {
+      final secondaryTextColor = Theme.of(context).extension<AppColors>()!.textSecondary;
+      textStyle = Theme.of(context).textTheme.bodyMedium!.copyWith(
+            color: secondaryTextColor,
+          );
+    }
 
     if (ingredients.isEmpty) {
       return Text(
@@ -34,6 +46,7 @@ class IngredientsDescription extends StatelessWidget {
         children: _getInlineSpans(),
       ),
       style: textStyle,
+      textAlign: textAlign,
     );
   }
 
@@ -61,6 +74,17 @@ class IngredientsDescription extends StatelessWidget {
       );
     }
 
+    if (selectedToppings.isNotEmpty) {
+      inlineSpans.add(const TextSpan(text: ', '));
+      inlineSpans.add(
+        TextSpan(
+          text: selectedToppings //
+              .map<String>((e) => '+${e.name.toLowerCase()}')
+              .join(', '),
+        ),
+      );
+    }
+
     return inlineSpans;
   }
 
@@ -69,5 +93,8 @@ class IngredientsDescription extends StatelessWidget {
     super.debugFillProperties(properties);
     properties.add(IterableProperty<Ingredient>('ingredients', ingredients));
     properties.add(IterableProperty<Ingredient>('removedIngredients', removedIngredients));
+    properties.add(IterableProperty<Topping>('selectedToppings', selectedToppings));
+    style?.debugFillProperties(properties);
+    properties.add(EnumProperty<TextAlign>('textAlign', textAlign));
   }
 }

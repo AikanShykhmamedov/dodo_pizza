@@ -1,5 +1,6 @@
 import 'dart:collection';
 
+import '../models/combo_slot_group_item.dart';
 import '../models/dough.dart';
 import '../models/menu_offer.dart';
 import '../models/product.dart';
@@ -43,6 +44,32 @@ class PizzaCubit extends ProductCubit<PizzaState>
     );
   }
 
+  factory PizzaCubit.forComboSlotGroup(ComboSlotGroup group, PizzaBundle? selectedBundle) {
+    final priceById = <String, num>{
+      for (final item in group) //
+        item.product.id: item.extraPrice,
+    };
+
+    final pizzas = group.map<Pizza>((e) => e.product as Pizza);
+
+    final pizzaByDoughBySize = PizzaByDoughBySize();
+    for (final pizza in pizzas) {
+      if (pizzaByDoughBySize.containsKey(pizza.size)) {
+        pizzaByDoughBySize[pizza.size]![pizza.dough] = pizza;
+      } else {
+        pizzaByDoughBySize[pizza.size] = PizzaByDough.of(<Dough, Pizza>{pizza.dough: pizza});
+      }
+    }
+
+    final initialState = _getInitialState(priceById, pizzaByDoughBySize, selectedBundle);
+
+    return PizzaCubit._(
+      priceById: priceById,
+      pizzaByDoughBySize: pizzaByDoughBySize,
+      initialState: initialState,
+    );
+  }
+
   static PizzaByDoughBySize _getPizzaByDoughBySize(
     List<ShoppingItem> items,
     MenuRepository repository,
@@ -65,22 +92,28 @@ class PizzaCubit extends ProductCubit<PizzaState>
 
   static PizzaState _getInitialState(
     PriceById priceById,
-    PizzaByDoughBySize pizzaByDoughBySize,
-  ) {
+    PizzaByDoughBySize pizzaByDoughBySize, [
+    PizzaBundle? selectedBundle,
+  ]) {
     final sizes = pizzaByDoughBySize.keys.toList();
-    final initialSize = sizes[(sizes.length - 1) ~/ 2];
+    final initialSize = selectedBundle?.product.size ?? sizes[(sizes.length - 1) ~/ 2];
 
     final doughs = pizzaByDoughBySize[initialSize]!.keys.toList();
-    final initialDough = doughs[(doughs.length - 1) ~/ 2];
+    final initialDough = selectedBundle?.product.dough ?? doughs[(doughs.length - 1) ~/ 2];
 
     final pizza = pizzaByDoughBySize[initialSize]![initialDough]!;
-    final price = priceById[pizza.id]!;
+
+    final removedIngredients = selectedBundle?.removedIngredients ?? const {};
+    final selectedToppingIds = selectedBundle?.selectedToppingIds ?? const {};
+
+    final toppingsPrice = pizza.getToppingsPrice(selectedToppingIds);
+    final price = priceById[pizza.id]! + toppingsPrice;
 
     return PizzaState(
       bundle: PizzaBundle(
         product: pizza,
-        removedIngredients: const {},
-        selectedToppingIds: const {},
+        removedIngredients: removedIngredients,
+        selectedToppingIds: selectedToppingIds,
         price: price,
       ),
       sizes: sizes,

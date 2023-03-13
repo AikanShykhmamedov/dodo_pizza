@@ -39,12 +39,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m4(value) => "Add to basket for £${value}";
 
-  static String m5(diameter) => "${Intl.select(diameter, {
-            'small': 'Small',
-            'medium': 'Medium',
-            'large': 'Large',
-            'other': '',
-          })}";
+  static String m5(currentPage, pagesCount) =>
+      "${currentPage} of ${pagesCount}";
 
   static String m6(diameter) => "${Intl.select(diameter, {
             'small': 'Small',
@@ -53,29 +49,36 @@ class MessageLookup extends MessageLookupByLibrary {
             'other': '',
           })}";
 
-  static String m7(dough) => "${Intl.select(dough, {
+  static String m7(diameter) => "${Intl.select(diameter, {
+            'small': 'Small',
+            'medium': 'Medium',
+            'large': 'Large',
+            'other': '',
+          })}";
+
+  static String m8(dough) => "${Intl.select(dough, {
             'original': 'Original crust',
             'thin': 'Thin crust',
             'other': '',
           })}";
 
-  static String m8(dough) => "${Intl.select(dough, {
+  static String m9(dough) => "${Intl.select(dough, {
             'original': 'Original',
             'thin': 'Thin',
             'other': '',
           })}";
 
-  static String m9(value) => "${value} pcs.";
+  static String m10(value) => "${value} pcs.";
 
-  static String m10(value) => "${value} l";
+  static String m11(value) => "${value} l";
 
-  static String m11(value) => "${value} g";
+  static String m12(value) => "${value} g";
 
-  static String m12(value) => "from £${value}";
+  static String m13(value) => "from £${value}";
 
-  static String m13(value) => "£${value}";
+  static String m14(value) => "£${value}";
 
-  static String m14(isoName) => "${Intl.select(isoName, {
+  static String m15(isoName) => "${Intl.select(isoName, {
             'BY': 'Belarus',
             'CZ': 'Czech Republic',
             'DE': 'Germany',
@@ -140,21 +143,34 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Add to taste"),
         "menu_offer_combo_slot_change":
             MessageLookupByLibrary.simpleMessage("Change"),
-        "menu_offer_diameter_full_name": m5,
-        "menu_offer_diameter_name": m6,
-        "menu_offer_dough_full_name": m7,
-        "menu_offer_dough_name": m8,
-        "menu_offer_piece_count": m9,
+        "menu_offer_combo_slot_dialog_page_of": m5,
+        "menu_offer_combo_slot_product_card_add_deal":
+            MessageLookupByLibrary.simpleMessage("Add to deal"),
+        "menu_offer_combo_slot_product_card_cancel":
+            MessageLookupByLibrary.simpleMessage("Cancel"),
+        "menu_offer_combo_slot_product_card_change_composition":
+            MessageLookupByLibrary.simpleMessage("Change composition"),
+        "menu_offer_combo_slot_product_card_change_ingredients":
+            MessageLookupByLibrary.simpleMessage("Can be removed"),
+        "menu_offer_combo_slot_product_card_save":
+            MessageLookupByLibrary.simpleMessage("Save"),
+        "menu_offer_combo_slot_product_card_selected":
+            MessageLookupByLibrary.simpleMessage("Selected"),
+        "menu_offer_diameter_full_name": m6,
+        "menu_offer_diameter_name": m7,
+        "menu_offer_dough_full_name": m8,
+        "menu_offer_dough_name": m9,
+        "menu_offer_piece_count": m10,
         "menu_offer_remove_ingredients":
             MessageLookupByLibrary.simpleMessage("Remove ingredients"),
         "menu_offer_remove_ingredients_dialog_done":
             MessageLookupByLibrary.simpleMessage("Done"),
         "menu_offer_remove_ingredients_dialog_reset":
             MessageLookupByLibrary.simpleMessage("Reset"),
-        "menu_offer_volume_count": m10,
-        "menu_offer_weight_count": m11,
-        "menu_price_from_count": m12,
-        "price_count": m13,
+        "menu_offer_volume_count": m11,
+        "menu_offer_weight_count": m12,
+        "menu_price_from_count": m13,
+        "price_count": m14,
         "price_pattern": MessageLookupByLibrary.simpleMessage("0.00"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "profile_enter_phone_number":
@@ -168,6 +184,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "region_city_search_hint":
             MessageLookupByLibrary.simpleMessage("Choose your city"),
         "region_country": MessageLookupByLibrary.simpleMessage("Country"),
-        "region_country_name": m14
+        "region_country_name": m15
       };
 }

@@ -1,9 +1,13 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dodo_pizza/app/app_assets.dart';
+import 'package:dodo_pizza/app/app_colors.dart';
 import 'package:dodo_pizza/localization/localization.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../../models/ingredient.dart';
+import '../../models/topping.dart';
 
 class ComboSlotCard extends StatelessWidget {
   const ComboSlotCard({
@@ -12,12 +16,16 @@ class ComboSlotCard extends StatelessWidget {
     required this.imageUrl,
     required this.name,
     required this.details,
+    required this.removedIngredients,
+    required this.selectedToppings,
     required this.extraPrice,
   });
 
   final String imageUrl;
   final String name;
   final String? details;
+  final Set<Ingredient> removedIngredients;
+  final Set<Topping> selectedToppings;
   final num extraPrice;
   final VoidCallback onPressed;
 
@@ -62,6 +70,26 @@ class ComboSlotCard extends StatelessWidget {
                           style: Theme.of(context).textTheme.bodySmall!,
                         ),
                       ),
+                    if (removedIngredients.isNotEmpty)
+                      Padding(
+                        padding: const EdgeInsets.only(top: 2),
+                        child: Text(
+                          '- ${removedIngredients.map<String>((e) => e.name).join(', ')}',
+                          style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                                color: Theme.of(context).extension<AppColors>()!.textSecondary,
+                              ),
+                        ),
+                      ),
+                    if (selectedToppings.isNotEmpty)
+                      Padding(
+                        padding: const EdgeInsets.only(top: 2),
+                        child: Text(
+                          '+ ${selectedToppings.map<String>((e) => e.name).join(', ')}',
+                          style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                                color: Theme.of(context).extension<AppColors>()!.textSecondary,
+                              ),
+                        ),
+                      ),
                     if (extraPrice > 0)
                       Padding(
                         padding: const EdgeInsets.only(top: 4),
@@ -100,6 +128,8 @@ class ComboSlotCard extends StatelessWidget {
     properties.add(StringProperty('imageUrl', imageUrl));
     properties.add(StringProperty('name', name));
     properties.add(StringProperty('details', details));
+    properties.add(IterableProperty<Ingredient>('removedIngredients', removedIngredients));
+    properties.add(IterableProperty<Topping>('selectedToppings', selectedToppings));
     properties.add(DiagnosticsProperty<num>('extraPrice', extraPrice));
     properties.add(DiagnosticsProperty<Function>('onPressed', onPressed));
   }

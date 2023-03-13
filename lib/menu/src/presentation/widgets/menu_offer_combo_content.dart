@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../blocs/combo_cubit.dart';
+import '../../models/combo_slot.dart';
 import '../../models/product.dart';
+import '../dialogs/combo_slot_dialog.dart';
 import 'combo_slot_card.dart';
 import 'menu_offer_content_base.dart';
 import 'prices_table.dart';
@@ -19,6 +21,7 @@ class MenuOfferComboContent extends StatelessWidget {
         .expand<Widget>((entry) sync* {
           yield const SizedBox(height: 8);
 
+          final slot = entry.key;
           final bundle = entry.value;
 
           final details = _getDetails(context, bundle.product);
@@ -27,8 +30,10 @@ class MenuOfferComboContent extends StatelessWidget {
             imageUrl: bundle.product.imageUrl,
             name: bundle.product.name,
             details: details,
+            removedIngredients: bundle.removedIngredients,
+            selectedToppings: bundle.selectedToppings,
             extraPrice: bundle.price,
-            onPressed: () => {},
+            onPressed: () => _onSlotPressed(context, slot),
           );
         })
         .skip(1)
@@ -65,6 +70,21 @@ class MenuOfferComboContent extends StatelessWidget {
       return S.of(context).menu_offer_product_size(product.size!);
     } else {
       return null;
+    }
+  }
+
+  Future<void> _onSlotPressed(BuildContext context, ComboSlot slot) async {
+    final cubit = context.read<ComboCubit>();
+    final groups = cubit.getGroups(slot);
+    final selectedBundle = cubit.state.bundle.slotProductBundles[slot]!;
+    final product = await showComboSlotDialog(
+      context: context,
+      groups: groups,
+      selectedBundle: selectedBundle,
+    );
+
+    if (product != null) {
+      cubit.selectSlotProductBundle(slot, product);
     }
   }
 }

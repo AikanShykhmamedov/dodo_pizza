@@ -2,6 +2,7 @@ import 'dart:collection';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../models/combo_slot_group_item.dart';
 import '../models/ingredient.dart';
 import '../models/menu_offer.dart';
 import '../models/product.dart';
@@ -56,6 +57,56 @@ class SingleProductCubit extends ProductCubit<SingleProductState>
         product: product,
         removedIngredients: const {},
         selectedToppingIds: const {},
+        price: price,
+      ),
+      sizes: productBySize?.keys,
+    );
+
+    return SingleProductCubit._(
+      priceById: priceById,
+      productBySize: productBySize,
+      initialState: initialState,
+    );
+  }
+
+  factory SingleProductCubit.fromComboSlotGroup(
+    ComboSlotGroup group,
+    SingleProductBundle? selectedBundle,
+  ) {
+    final priceById = <String, num>{
+      for (final item in group) //
+        item.product.id: item.extraPrice,
+    };
+
+    final ProductBySize? productBySize;
+    final SingleProduct product;
+    if (group.length == 1) {
+      productBySize = null;
+      product = group.first.product;
+    } else {
+      productBySize = ProductBySize();
+      final products = group.map<SingleProduct>((e) => e.product);
+
+      for (final product in products) {
+        productBySize[product.size!] = product;
+      }
+
+      final sizes = productBySize.keys.toList();
+      final initialSize = selectedBundle?.product.size ?? sizes[(sizes.length - 1) ~/ 2];
+      product = productBySize[initialSize]!;
+    }
+
+    final removedIngredients = selectedBundle?.removedIngredients ?? const {};
+    final selectedToppingIds = selectedBundle?.selectedToppingIds ?? const {};
+
+    final toppingsPrice = product.getToppingsPrice(selectedToppingIds);
+    final price = priceById[product.id]! + toppingsPrice;
+
+    final initialState = SingleProductState(
+      bundle: SingleProductBundle(
+        product: product,
+        removedIngredients: removedIngredients,
+        selectedToppingIds: selectedToppingIds,
         price: price,
       ),
       sizes: productBySize?.keys,
@@ -139,6 +190,27 @@ mixin SingleProductToppingsMixin<T extends SingleProductState> on Cubit<T> {
   void removeTopping(Topping topping) {
     final selectedToppingIds = state.bundle.selectedToppingIds.toSet()..remove(topping.id);
     final price = state.bundle.price - topping.price;
+
+    emit(state.copyWith(
+      bundle: state.bundle.copyWith(
+        selectedToppingIds: selectedToppingIds,
+        price: price,
+      ),
+    ) as T);
+  }
+
+  void setToppings(Set<Topping> selectedToppings) {
+    final selectedToppingIds = selectedToppings.map<String>((e) => e.id).toSet();
+    final addedToppings = selectedToppings.difference(state.bundle.selectedToppings);
+    final removedToppings = state.bundle.selectedToppings.difference(selectedToppings);
+    final addedToppingsPrice = addedToppings //
+        .map<num>((e) => e.price)
+        .fold<num>(0, (sum, e) => sum + e);
+    final removedToppingsPrice = removedToppings //
+        .map<num>((e) => e.price)
+        .fold<num>(0, (sum, e) => sum + e);
+
+    final price = state.bundle.price - removedToppingsPrice + addedToppingsPrice;
 
     emit(state.copyWith(
       bundle: state.bundle.copyWith(
