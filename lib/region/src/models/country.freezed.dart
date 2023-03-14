@@ -103,19 +103,19 @@ class __$$_CountryCopyWithImpl<$Res>
     Object? order = null,
   }) {
     return _then(_$_Country(
-      null == name
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      null == isoName
+      isoName: null == isoName
           ? _value.isoName
           : isoName // ignore: cast_nullable_to_non_nullable
               as String,
-      null == code
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as int,
-      null == order
+      order: null == order
           ? _value.order
           : order // ignore: cast_nullable_to_non_nullable
               as int,
@@ -126,7 +126,11 @@ class __$$_CountryCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Country implements _Country {
-  const _$_Country(this.name, this.isoName, this.code, this.order);
+  const _$_Country(
+      {required this.name,
+      required this.isoName,
+      required this.code,
+      required this.order});
 
   factory _$_Country.fromJson(Map<String, dynamic> json) =>
       _$$_CountryFromJson(json);
@@ -175,8 +179,11 @@ class _$_Country implements _Country {
 }
 
 abstract class _Country implements Country {
-  const factory _Country(final String name, final String isoName,
-      final int code, final int order) = _$_Country;
+  const factory _Country(
+      {required final String name,
+      required final String isoName,
+      required final int code,
+      required final int order}) = _$_Country;
 
   factory _Country.fromJson(Map<String, dynamic> json) = _$_Country.fromJson;
 

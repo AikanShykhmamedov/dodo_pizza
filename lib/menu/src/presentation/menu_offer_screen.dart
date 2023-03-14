@@ -69,7 +69,6 @@ class _MenuOfferScreenState extends State<MenuOfferScreen> {
       clipBehavior: Clip.antiAlias,
       child: Material(
         type: MaterialType.transparency,
-        elevation: 0,
         child: IconButton(
           onPressed: () => _onBackPressed(context),
           icon: const Icon(Icons.navigate_before_rounded),

@@ -54,7 +54,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
   Widget build(BuildContext context) {
     return BlocBuilder<CitiesBloc, CitiesState>(
       bloc: _citiesBloc,
-      builder: (BuildContext context, state) {
+      builder: (context, state) {
         final appBar = CitiesAppBar(
           canPop: _canPop,
           countryName: state.country.name,
@@ -86,7 +86,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
         );
 
         return WillPopScope(
-          onWillPop: () async => _canPop ? true : false,
+          onWillPop: () async => _canPop,
           child: Scaffold(
             backgroundColor: Theme.of(context).colorScheme.background,
             appBar: appBar,

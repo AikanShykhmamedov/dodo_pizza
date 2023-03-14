@@ -28,7 +28,7 @@ class Flipper extends StatelessWidget {
     return AnimatedSwitcher(
       duration: AppAnimationDurations.standard,
       transitionBuilder: (child, animation) {
-        final isForeground = (child.key as IsForegroundKey).value;
+        final isForeground = (child.key! as IsForegroundKey).value;
         final isConcealing = isForeground == isFlipped;
 
         return AnimatedBuilder(

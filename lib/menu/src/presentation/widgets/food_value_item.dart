@@ -89,7 +89,6 @@ class FoodValueItem extends StatelessWidget {
 
 class _Item extends StatelessWidget {
   const _Item({
-    super.key,
     required this.label,
     required this.value,
     required this.textStyle,

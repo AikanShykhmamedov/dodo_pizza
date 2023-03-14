@@ -57,7 +57,8 @@ class ComboCubit extends ProductCubit<ComboState> {
     List<ComboSlot> slots,
     MenuRepository repository,
   ) {
-    final SlotProductBundles result = {};
+    // ignore: prefer_collection_literals
+    final result = SlotProductBundles();
 
     for (final slot in slots) {
       final product = repository.getProductById(slot.defaultProductId) as SingleProduct;

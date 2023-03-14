@@ -105,7 +105,7 @@ class MenuOfferContentBase extends StatelessWidget {
   }
 
   void _onFoodValuePressed(BuildContext context) {
-    final iconRenderObject = context.findRenderObject() as RenderBox;
+    final iconRenderObject = context.findRenderObject()! as RenderBox;
     final iconSize = iconRenderObject.size;
     final anchor = iconRenderObject.localToGlobal(iconSize.centerLeft(Offset.zero));
     final foodValuesByName = <String, FoodValue>{

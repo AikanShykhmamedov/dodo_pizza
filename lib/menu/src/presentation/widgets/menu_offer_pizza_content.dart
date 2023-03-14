@@ -130,6 +130,7 @@ class MenuOfferPizzaContent extends StatelessWidget {
     );
 
     if (removed != null) {
+      // ignore: use_build_context_synchronously
       context.read<PizzaCubit>().setRemovedIngredients(removed);
     }
   }

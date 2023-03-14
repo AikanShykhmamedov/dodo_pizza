@@ -146,7 +146,6 @@ class _ComboSlotDialogState extends State<ComboSlotDialog> {
 
 class _SelectedCardInTransition extends StatelessWidget {
   _SelectedCardInTransition({
-    super.key,
     required this.animation,
     required this.child,
   });

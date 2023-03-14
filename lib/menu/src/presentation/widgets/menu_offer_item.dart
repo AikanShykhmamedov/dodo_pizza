@@ -73,7 +73,6 @@ class MenuOfferItem extends StatelessWidget {
 
 class _TileLayout extends StatelessWidget {
   const _TileLayout({
-    super.key,
     required this.imageUrl,
     required this.name,
     required this.description,
@@ -158,7 +157,6 @@ class _TileLayout extends StatelessWidget {
 
 class _PromotionLayout extends StatelessWidget {
   const _PromotionLayout({
-    super.key,
     required this.imageUrl,
     required this.name,
     required this.description,

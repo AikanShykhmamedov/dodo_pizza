@@ -6,12 +6,12 @@ part 'country.g.dart';
 
 @freezed
 class Country with _$Country {
-  const factory Country(
-    String name,
-    String isoName,
-    int code,
-    int order,
-  ) = _Country;
+  const factory Country({
+    required String name,
+    required String isoName,
+    required int code,
+    required int order,
+  }) = _Country;
 
   factory Country.fromJson(Map<String, dynamic> json) => _$CountryFromJson(json);
 }

@@ -179,7 +179,7 @@ class _ComboSlotProductCompositionCardState extends State<ComboSlotProductCompos
       ),
     );
 
-    return Container(
+    return DecoratedBox(
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.surface,
         borderRadius: BorderRadius.circular(16),

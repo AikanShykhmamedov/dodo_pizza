@@ -65,7 +65,7 @@ class ComboSlotProductCardBase extends StatelessWidget {
       );
     }
 
-    return Container(
+    return DecoratedBox(
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.surface,
         borderRadius: BorderRadius.circular(16),
@@ -120,7 +120,6 @@ class ComboSlotProductCardBase extends StatelessWidget {
                 ),
                 const SizedBox(height: 24),
                 Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     if (price != 0)
                       Padding(
@@ -161,7 +160,7 @@ class ComboSlotProductCardBase extends StatelessWidget {
   }
 
   void _onFoodValuesPressed(BuildContext context) {
-    final iconRenderObject = context.findRenderObject() as RenderBox;
+    final iconRenderObject = context.findRenderObject()! as RenderBox;
     final iconSize = iconRenderObject.size;
     final anchor = iconRenderObject.localToGlobal(iconSize.bottomRight(Offset.zero));
     final foodValuesByName = <String, FoodValue>{

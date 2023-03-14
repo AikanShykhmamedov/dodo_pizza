@@ -7,11 +7,11 @@ part of 'city.dart';
 // **************************************************************************
 
 _$_City _$$_CityFromJson(Map<String, dynamic> json) => _$_City(
-      json['id'] as String,
-      json['uuId'] as String,
-      json['name'] as String,
-      json['order'] as int,
-      json['isTop'] as bool,
+      id: json['id'] as String,
+      uuId: json['uuId'] as String,
+      name: json['name'] as String,
+      order: json['order'] as int,
+      isTop: json['isTop'] as bool,
     );
 
 Map<String, dynamic> _$$_CityToJson(_$_City instance) => <String, dynamic>{

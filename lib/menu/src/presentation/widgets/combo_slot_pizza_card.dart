@@ -49,9 +49,7 @@ class _ComboSlotPizzaCardState extends State<ComboSlotPizzaCard> {
     final doughs = cubit.state.doughs;
 
     final isProductSelected = widget.selectedBundle?.product == pizza;
-    final isBundleChanged = isProductSelected //
-        ? _isBundleChanged(widget.selectedBundle!, bundle)
-        : false;
+    final isBundleChanged = isProductSelected && _isBundleChanged(widget.selectedBundle!, bundle);
 
     final canChangeComposition =
         pizza.toppings.isNotEmpty || pizza.ingredients.any((e) => e.isRemovable);

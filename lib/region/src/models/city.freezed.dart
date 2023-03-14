@@ -108,23 +108,23 @@ class __$$_CityCopyWithImpl<$Res> extends _$CityCopyWithImpl<$Res, _$_City>
     Object? isTop = null,
   }) {
     return _then(_$_City(
-      null == id
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      null == uuId
+      uuId: null == uuId
           ? _value.uuId
           : uuId // ignore: cast_nullable_to_non_nullable
               as String,
-      null == name
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      null == order
+      order: null == order
           ? _value.order
           : order // ignore: cast_nullable_to_non_nullable
               as int,
-      null == isTop
+      isTop: null == isTop
           ? _value.isTop
           : isTop // ignore: cast_nullable_to_non_nullable
               as bool,
@@ -135,7 +135,12 @@ class __$$_CityCopyWithImpl<$Res> extends _$CityCopyWithImpl<$Res, _$_City>
 /// @nodoc
 @JsonSerializable()
 class _$_City implements _City {
-  const _$_City(this.id, this.uuId, this.name, this.order, this.isTop);
+  const _$_City(
+      {required this.id,
+      required this.uuId,
+      required this.name,
+      required this.order,
+      required this.isTop});
 
   factory _$_City.fromJson(Map<String, dynamic> json) => _$$_CityFromJson(json);
 
@@ -186,8 +191,12 @@ class _$_City implements _City {
 }
 
 abstract class _City implements City {
-  const factory _City(final String id, final String uuId, final String name,
-      final int order, final bool isTop) = _$_City;
+  const factory _City(
+      {required final String id,
+      required final String uuId,
+      required final String name,
+      required final int order,
+      required final bool isTop}) = _$_City;
 
   factory _City.fromJson(Map<String, dynamic> json) = _$_City.fromJson;
 

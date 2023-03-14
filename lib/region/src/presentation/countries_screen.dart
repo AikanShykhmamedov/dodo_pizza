@@ -32,7 +32,7 @@ class _CountriesScreenState extends State<CountriesScreen> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      onWillPop: () async => widget.canPop ? true : false,
+      onWillPop: () async => widget.canPop,
       child: Scaffold(
         backgroundColor: Theme.of(context).colorScheme.background,
         appBar: AppBar(
