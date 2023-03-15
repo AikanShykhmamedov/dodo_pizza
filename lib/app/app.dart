@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'app_router.dart';
+import 'app_theme.dart';
 
 class App extends StatelessWidget {
   App({super.key});
@@ -29,6 +30,7 @@ class App extends StatelessWidget {
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: S.delegate.supportedLocales,
+          theme: appTheme,
         ),
       ),
     );
