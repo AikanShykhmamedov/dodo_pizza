@@ -77,16 +77,12 @@ class _ComboSlotPizzaCardState extends State<ComboSlotPizzaCard> {
         ),
         const SizedBox(height: 16),
         if (canChangeComposition)
-          SizedBox(
-            height: 32,
-            child: TextButton(
-              onPressed: _showBackground,
-              style: TextButton.styleFrom(
-                backgroundColor: Theme.of(context).colorScheme.primaryContainer,
-                foregroundColor: Theme.of(context).colorScheme.onPrimaryContainer,
-              ),
-              child: Text(S.of(context).menu_offer_combo_slot_product_card_change_composition),
+          FilledButton.tonal(
+            onPressed: _showBackground,
+            style: FilledButton.styleFrom(
+              minimumSize: const Size.square(32),
             ),
+            child: Text(S.of(context).menu_offer_combo_slot_product_card_change_composition),
           ),
         const Spacer(),
         SizedBox(

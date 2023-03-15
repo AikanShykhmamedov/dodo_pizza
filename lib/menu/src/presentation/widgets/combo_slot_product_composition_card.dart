@@ -138,45 +138,45 @@ class _ComboSlotProductCompositionCardState extends State<ComboSlotProductCompos
 
     final bottomButtons = Padding(
       padding: const EdgeInsets.all(16),
-      child: SizedBox(
-        width: double.infinity,
-        child: _selectedToppingsChanged || _removedIngredientsChanged
-            ? Row(
-                children: [
-                  SizedBox.square(
-                    dimension: 48,
-                    child: Material(
-                      type: MaterialType.circle,
-                      color: Theme.of(context).colorScheme.background,
-                      clipBehavior: Clip.antiAlias,
-                      child: InkWell(
-                        onTap: widget.onCancel,
-                        child: Icon(
-                          Icons.clear_rounded,
-                          color: Theme.of(context).colorScheme.onBackground,
-                        ),
+      child: _selectedToppingsChanged || _removedIngredientsChanged
+          ? Row(
+              children: [
+                SizedBox.square(
+                  dimension: 48,
+                  child: Material(
+                    type: MaterialType.circle,
+                    color: Theme.of(context).colorScheme.background,
+                    clipBehavior: Clip.antiAlias,
+                    child: InkWell(
+                      onTap: widget.onCancel,
+                      child: Icon(
+                        Icons.clear_rounded,
+                        color: Theme.of(context).colorScheme.onBackground,
                       ),
                     ),
                   ),
-                  const SizedBox(width: 16),
-                  Expanded(
-                    child: TextButton(
-                      onPressed: _onSave,
-                      child:
-                          Text(S.of(context).menu_offer_combo_slot_product_card_save.toUpperCase()),
-                    ),
+                ),
+                const SizedBox(width: 16),
+                Expanded(
+                  child: FilledButton(
+                    onPressed: _onSave,
+                    child:
+                        Text(S.of(context).menu_offer_combo_slot_product_card_save.toUpperCase()),
                   ),
-                ],
-              )
-            : TextButton(
+                ),
+              ],
+            )
+          : SizedBox(
+              width: double.infinity,
+              child: FilledButton(
                 onPressed: widget.onCancel,
-                style: TextButton.styleFrom(
+                style: FilledButton.styleFrom(
                   backgroundColor: Theme.of(context).colorScheme.background,
                   foregroundColor: Theme.of(context).colorScheme.onBackground,
                 ),
                 child: Text(S.of(context).menu_offer_combo_slot_product_card_cancel.toUpperCase()),
               ),
-      ),
+            ),
     );
 
     return DecoratedBox(

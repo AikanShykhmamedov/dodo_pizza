@@ -46,7 +46,7 @@ class _ProfileScreenState extends State<ProfileScreen> with AutomaticKeepAliveCl
               ),
               const SizedBox(height: 16),
               Center(
-                child: TextButton(
+                child: FilledButton(
                   onPressed: () {},
                   child: Text(S.of(context).profile_enter_phone_number.toUpperCase()),
                 ),

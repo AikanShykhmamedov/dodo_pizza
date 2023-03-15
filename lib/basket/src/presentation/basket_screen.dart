@@ -55,7 +55,7 @@ class _BasketScreenState extends State<BasketScreen> with AutomaticKeepAliveClie
             ),
             const SizedBox(height: 24),
             Center(
-              child: TextButton(
+              child: FilledButton(
                 onPressed: () {},
                 child: Text(S.of(context).basket_go_to_menu.toUpperCase()),
               ),

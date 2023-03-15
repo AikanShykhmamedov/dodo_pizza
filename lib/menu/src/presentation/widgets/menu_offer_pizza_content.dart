@@ -33,11 +33,16 @@ class MenuOfferPizzaContent extends StatelessWidget {
 
     Widget? removeIngredients;
     if (pizza.ingredients.any((e) => e.isRemovable)) {
-      removeIngredients = InkWell(
-        onTap: () => _onRemoveIngredientsPressed(
+      removeIngredients = TextButton(
+        onPressed: () => _onRemoveIngredientsPressed(
           context,
           bundle.product.ingredients,
           bundle.removedIngredients,
+        ),
+        style: TextButton.styleFrom(
+          padding: EdgeInsets.zero,
+          minimumSize: Size.zero,
+          shape: const RoundedRectangleBorder(),
         ),
         child: Text(
           S.of(context).menu_offer_remove_ingredients,

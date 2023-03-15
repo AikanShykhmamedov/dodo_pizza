@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'widgets/list_button.dart';
-import 'widgets/secondary_text_button.dart';
 import 'widgets/social_media_button.dart';
 
 class ContactsScreen extends StatefulWidget {
@@ -34,7 +33,7 @@ class _ContactsScreenState extends State<ContactsScreen> with AutomaticKeepAlive
         ),
         Padding(
           padding: const EdgeInsets.only(bottom: 16),
-          child: TextButton(
+          child: FilledButton(
             onPressed: () {},
             child: Text(S.of(context).contact_map.toUpperCase()),
           ),
@@ -45,16 +44,16 @@ class _ContactsScreenState extends State<ContactsScreen> with AutomaticKeepAlive
     final contactOptions = Row(
       children: [
         Expanded(
-          child: SecondaryTextButton(
+          child: FilledButton.tonal(
             onPressed: () {},
-            title: S.of(context).contact_call.toUpperCase(),
+            child: Text(S.of(context).contact_call.toUpperCase()),
           ),
         ),
         const SizedBox(width: 16),
         Expanded(
-          child: SecondaryTextButton(
+          child: FilledButton.tonal(
             onPressed: () {},
-            title: S.of(context).contact_chat.toUpperCase(),
+            child: Text(S.of(context).contact_chat.toUpperCase()),
           ),
         ),
       ],

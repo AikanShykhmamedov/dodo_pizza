@@ -44,22 +44,18 @@ class ComboSlotProductCardBase extends StatelessWidget {
     final Widget button;
     if (isGroupSelected) {
       if (isProductSelected && !isBundleChanged) {
-        button = TextButton(
+        button = FilledButton.tonal(
           onPressed: onSelect,
-          style: TextButton.styleFrom(
-            backgroundColor: Theme.of(context).colorScheme.primaryContainer,
-            foregroundColor: Theme.of(context).colorScheme.onPrimaryContainer,
-          ),
           child: Text(S.of(context).menu_offer_combo_slot_product_card_selected.toUpperCase()),
         );
       } else {
-        button = TextButton(
+        button = FilledButton(
           onPressed: onSelect,
           child: Text(S.of(context).menu_offer_combo_slot_product_card_save.toUpperCase()),
         );
       }
     } else {
-      button = TextButton(
+      button = FilledButton(
         onPressed: onSelect,
         child: Text(S.of(context).menu_offer_combo_slot_product_card_add_deal.toUpperCase()),
       );

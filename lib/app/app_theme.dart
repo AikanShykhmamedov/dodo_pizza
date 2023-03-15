@@ -13,6 +13,7 @@ final appTheme = ThemeData(
   chipTheme: _chipTheme,
   dividerTheme: _dividerTheme,
   listTileTheme: _listTileTheme,
+  filledButtonTheme: _filledButtonTheme,
   textButtonTheme: _textButtonTheme,
   textTheme: _textTheme,
 );
@@ -42,6 +43,8 @@ const _colorScheme = ColorScheme(
   onPrimaryContainer: Color(0xffc25f24),
   secondary: Colors.red,
   onSecondary: Colors.red,
+  secondaryContainer: Color(0xfffdf1e6),
+  onSecondaryContainer: Color(0xffc25f24),
   error: Colors.red,
   onError: Colors.white,
   background: Color(0xfff3f3f7),
@@ -101,14 +104,21 @@ final _listTileTheme = ListTileThemeData(
   tileColor: _colorScheme.surface,
 );
 
+final _filledButtonTheme = FilledButtonThemeData(
+  style: FilledButton.styleFrom(
+    minimumSize: const Size.square(48),
+    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+  ),
+);
+
 final _textButtonTheme = TextButtonThemeData(
   style: TextButton.styleFrom(
-    fixedSize: const Size.fromHeight(48),
-    backgroundColor: _colorScheme.primary,
-    foregroundColor: _colorScheme.onPrimary,
-    shape: const StadiumBorder(),
+    foregroundColor: _colorScheme.onPrimaryContainer,
+    backgroundColor: Colors.transparent,
     padding: const EdgeInsets.symmetric(horizontal: 16),
-    splashFactory: InkSparkle.splashFactory,
+    minimumSize: const Size.square(40),
+    shape: const StadiumBorder(),
+    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
   ),
 );
 

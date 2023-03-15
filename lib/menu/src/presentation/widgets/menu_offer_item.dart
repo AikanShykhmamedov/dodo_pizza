@@ -125,17 +125,12 @@ class _TileLayout extends StatelessWidget {
               const SizedBox(height: 12),
               Row(
                 children: [
-                  SizedBox(
-                    height: 32,
-                    child: TextButton(
-                      onPressed: onPricePressed,
-                      style: TextButton.styleFrom(
-                        backgroundColor: theme.colorScheme.primaryContainer,
-                        foregroundColor: theme.colorScheme.onPrimaryContainer,
-                        minimumSize: const Size.fromWidth(96),
-                      ),
-                      child: Text(price),
+                  FilledButton.tonal(
+                    onPressed: onPricePressed,
+                    style: FilledButton.styleFrom(
+                      minimumSize: const Size(96, 32),
                     ),
+                    child: Text(price),
                   ),
                   if (fullPrice != null)
                     Padding(
@@ -221,17 +216,12 @@ class _PromotionLayout extends StatelessWidget {
                             style: theme.textTheme.bodyMedium!,
                           ),
                         ),
-                      SizedBox(
-                        height: 32,
-                        child: TextButton(
-                          onPressed: onPricePressed,
-                          style: TextButton.styleFrom(
-                            backgroundColor: theme.colorScheme.primaryContainer,
-                            foregroundColor: theme.colorScheme.onPrimaryContainer,
-                            minimumSize: const Size.fromWidth(96),
-                          ),
-                          child: Text(price),
+                      FilledButton.tonal(
+                        onPressed: onPricePressed,
+                        style: FilledButton.styleFrom(
+                          minimumSize: const Size(96, 32),
                         ),
+                        child: Text(price),
                       ),
                     ],
                   )

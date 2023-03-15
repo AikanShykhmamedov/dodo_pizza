@@ -38,7 +38,7 @@ class AddToBasketBar extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: TextButton(
+            child: FilledButton(
               onPressed: () {},
               child: Text(S.of(context).menu_offer_add_basket.toUpperCase()),
             ),
@@ -46,7 +46,7 @@ class AddToBasketBar extends StatelessWidget {
         ],
       );
     } else {
-      child = TextButton(
+      child = FilledButton(
         onPressed: () {},
         child: Text(S
             .of(context)

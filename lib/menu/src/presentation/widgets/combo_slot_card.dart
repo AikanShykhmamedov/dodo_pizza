@@ -101,16 +101,12 @@ class ComboSlotCard extends StatelessWidget {
                         ),
                       ),
                     const SizedBox(height: 12),
-                    SizedBox(
-                      height: 32,
-                      child: TextButton(
-                        onPressed: onPressed,
-                        style: TextButton.styleFrom(
-                          backgroundColor: Theme.of(context).colorScheme.primaryContainer,
-                          foregroundColor: Theme.of(context).colorScheme.onPrimaryContainer,
-                        ),
-                        child: Text(S.of(context).menu_offer_combo_slot_change),
+                    FilledButton.tonal(
+                      onPressed: onPressed,
+                      style: FilledButton.styleFrom(
+                        minimumSize: const Size.square(32),
                       ),
+                      child: Text(S.of(context).menu_offer_combo_slot_change),
                     )
                   ],
                 ),

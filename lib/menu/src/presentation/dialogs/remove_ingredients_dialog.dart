@@ -37,14 +37,6 @@ class _RemoveIngredientsDialogState extends State<RemoveIngredientsDialog> {
 
   @override
   Widget build(BuildContext context) {
-    final buttonStyle = TextButton.styleFrom(
-      fixedSize: const Size.fromHeight(40),
-      backgroundColor: Colors.transparent,
-      foregroundColor: Theme.of(context).colorScheme.onPrimaryContainer,
-      shape: const StadiumBorder(),
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-    );
-
     return FractionallySizedBox(
       widthFactor: 0.75,
       child: Dialog(
@@ -79,14 +71,12 @@ class _RemoveIngredientsDialogState extends State<RemoveIngredientsDialog> {
                 children: [
                   TextButton(
                     onPressed: _removedIngredients.isNotEmpty ? _onResetPressed : null,
-                    style: buttonStyle,
                     child: Text(
                         S.of(context).menu_offer_remove_ingredients_dialog_reset.toUpperCase()),
                   ),
                   const SizedBox(width: 8),
                   TextButton(
                     onPressed: _onDonePressed,
-                    style: buttonStyle,
                     child:
                         Text(S.of(context).menu_offer_remove_ingredients_dialog_done.toUpperCase()),
                   ),
