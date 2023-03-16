@@ -37,6 +37,7 @@ dev_dependencies:
   freezed: ^2.3.2
   json_serializable: ^6.5.4
   auto_route_generator: ^5.0.3
+  flutter_native_splash: ^2.2.19
 
 flutter:
   uses-material-design: true
@@ -50,3 +51,11 @@ flutter_intl:
   enabled: true
   arb_dir: lib/localization/src/l10n
   output_dir: lib/localization/src/generated
+
+flutter_native_splash:
+  color: "#ff6900"
+  image: assets/splash/splash_image.png
+
+  android_12:
+    color: "#ff6900"
+    image: assets/splash/splash_image_android_12.png
