@@ -67,7 +67,9 @@ class AddToBasketBar extends StatelessWidget {
         ],
       ),
       padding: const EdgeInsets.all(16),
-      child: child,
+      child: SafeArea(
+        child: child,
+      ),
     );
   }
 

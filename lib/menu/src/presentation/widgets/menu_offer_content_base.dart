@@ -36,71 +36,74 @@ class MenuOfferContentBase extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
-    return Column(
-      children: [
-        Expanded(
-          child: ListView(
-            padding: const EdgeInsets.all(16),
-            children: [
-              CachedNetworkImage(
-                imageUrl: imageUrl,
-                width: 344,
-                height: 344,
-                errorWidget: (_, __, ___) => SvgPicture.asset(AppAssets.productPlaceholder),
-                placeholder: (_, __) => SvgPicture.asset(AppAssets.productPlaceholder),
-                fadeInDuration: Duration.zero,
-                fadeOutDuration: Duration.zero,
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Expanded(
-                    child: Text(
-                      name,
-                      style: Theme.of(context).textTheme.headlineMedium!,
-                    ),
-                  ),
-                  if (products.any((e) => e.foodValue != null))
-                    Padding(
-                      padding: const EdgeInsets.only(left: 16),
-                      child: Builder(
-                        builder: (context) => GestureDetector(
-                          onTap: () => _onFoodValuePressed(context),
-                          child: const Icon(Icons.info_outline_rounded),
-                        ),
+    return SafeArea(
+      bottom: false,
+      child: Column(
+        children: [
+          Expanded(
+            child: ListView(
+              padding: const EdgeInsets.all(16),
+              children: [
+                CachedNetworkImage(
+                  imageUrl: imageUrl,
+                  width: 344,
+                  height: 344,
+                  errorWidget: (_, __, ___) => SvgPicture.asset(AppAssets.productPlaceholder),
+                  placeholder: (_, __) => SvgPicture.asset(AppAssets.productPlaceholder),
+                  fadeInDuration: Duration.zero,
+                  fadeOutDuration: Duration.zero,
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: Text(
+                        name,
+                        style: Theme.of(context).textTheme.headlineMedium!,
                       ),
-                    )
-                ],
-              ),
-              if (details != null)
-                Padding(
-                  padding: const EdgeInsets.only(top: 8),
-                  child: Text(
-                    details!,
-                    style: theme.textTheme.bodySmall!.copyWith(
-                      color: theme.extension<AppColors>()!.textSecondary,
+                    ),
+                    if (products.any((e) => e.foodValue != null))
+                      Padding(
+                        padding: const EdgeInsets.only(left: 16),
+                        child: Builder(
+                          builder: (context) => GestureDetector(
+                            onTap: () => _onFoodValuePressed(context),
+                            child: const Icon(Icons.info_outline_rounded),
+                          ),
+                        ),
+                      )
+                  ],
+                ),
+                if (details != null)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8),
+                    child: Text(
+                      details!,
+                      style: theme.textTheme.bodySmall!.copyWith(
+                        color: theme.extension<AppColors>()!.textSecondary,
+                      ),
                     ),
                   ),
-                ),
-              if (description != null)
-                Padding(
-                  padding: const EdgeInsets.only(top: 8),
-                  child: Text(
-                    description!,
-                    style: theme.textTheme.bodyMedium!.copyWith(
-                      color: theme.extension<AppColors>()!.textSecondary,
+                if (description != null)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8),
+                    child: Text(
+                      description!,
+                      style: theme.textTheme.bodyMedium!.copyWith(
+                        color: theme.extension<AppColors>()!.textSecondary,
+                      ),
                     ),
                   ),
-                ),
-              ...children,
-            ],
+                ...children,
+              ],
+            ),
           ),
-        ),
-        AddToBasketBar(
-          price: price,
-          fullPrice: fullPrice,
-        ),
-      ],
+          AddToBasketBar(
+            price: price,
+            fullPrice: fullPrice,
+          ),
+        ],
+      ),
     );
   }
 

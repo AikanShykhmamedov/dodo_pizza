@@ -92,17 +92,17 @@ class _MenuOfferScreenState extends State<MenuOfferScreen> {
     );
 
     return Scaffold(
-      body: SafeArea(
-        child: Stack(
-          children: [
-            content,
-            Positioned(
-              left: 16,
-              top: 8,
+      body: Stack(
+        children: [
+          content,
+          Positioned(
+            left: 16,
+            top: 8,
+            child: SafeArea(
               child: backButton,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

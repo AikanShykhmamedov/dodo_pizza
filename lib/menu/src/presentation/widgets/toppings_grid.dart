@@ -29,6 +29,7 @@ class ToppingsGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView(
+      padding: EdgeInsets.zero,
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
