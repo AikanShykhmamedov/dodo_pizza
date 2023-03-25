@@ -29,7 +29,7 @@ class ComboSlotSingleProductCard extends StatelessWidget {
     return ComboSlotProductCardBase(
       imageUrl: product.imageUrl,
       name: product.name,
-      details: product.size == null ? null : S.of(context).menu_offer_product_size(product.size!),
+      details: product.size == null ? null : S.of(context).menuOfferProductSize(product.size!),
       description: product.description,
       price: bundle.price,
       products: [product],
@@ -49,7 +49,7 @@ class ComboSlotSingleProductCard extends StatelessWidget {
                     value: size,
                     isSelected: product.size == size,
                     label: Text(
-                      S.of(context).menu_offer_product_size(size),
+                      S.of(context).menuOfferProductSize(size),
                       style: Theme.of(context).textTheme.labelSmall!,
                     ),
                   ),

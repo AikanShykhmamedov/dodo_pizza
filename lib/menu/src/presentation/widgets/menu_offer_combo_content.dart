@@ -65,9 +65,9 @@ class MenuOfferComboContent extends StatelessWidget {
 
   String? _getDetails(BuildContext context, SingleProduct product) {
     if (product is Pizza) {
-      return S.of(context).pizza_details(product);
+      return S.of(context).pizzaDetails(product);
     } else if (product.size != null) {
-      return S.of(context).menu_offer_product_size(product.size!);
+      return S.of(context).menuOfferProductSize(product.size!);
     } else {
       return null;
     }

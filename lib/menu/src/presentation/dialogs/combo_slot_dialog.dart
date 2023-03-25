@@ -62,7 +62,7 @@ class _ComboSlotDialogState extends State<ComboSlotDialog> {
         ValueListenableBuilder<int>(
           valueListenable: _currentPage,
           builder: (context, page, child) => Text(
-            S.of(context).menu_offer_combo_slot_dialog_page_of(1 + page, widget.groups.length),
+            S.of(context).menuOfferComboSlotDialogPageOf(1 + page, widget.groups.length),
             style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                   color: Theme.of(context).colorScheme.onInverseSurface,
                 ),

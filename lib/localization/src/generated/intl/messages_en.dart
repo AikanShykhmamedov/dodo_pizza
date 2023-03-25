@@ -103,87 +103,86 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "basket": MessageLookupByLibrary.simpleMessage("Basket"),
-        "basket_empty":
+        "basketEmpty":
             MessageLookupByLibrary.simpleMessage("Oops, it\'s empty here!"),
-        "basket_empty_content": MessageLookupByLibrary.simpleMessage(
+        "basketEmptyContent": MessageLookupByLibrary.simpleMessage(
             "Your basket is empty, open the menu to get started."),
-        "basket_empty_delivery": MessageLookupByLibrary.simpleMessage(
+        "basketEmptyDelivery": MessageLookupByLibrary.simpleMessage(
             "Minimum order amount for delivery is £10"),
-        "basket_go_to_menu": MessageLookupByLibrary.simpleMessage("Go to menu"),
+        "basketGoToMenu": MessageLookupByLibrary.simpleMessage("Go to menu"),
         "contact": MessageLookupByLibrary.simpleMessage("Contact"),
-        "contact_about_app":
+        "contactAboutApp":
             MessageLookupByLibrary.simpleMessage("About our App"),
-        "contact_call": MessageLookupByLibrary.simpleMessage("Call"),
-        "contact_chat": MessageLookupByLibrary.simpleMessage("Chat"),
-        "contact_legal_documents":
+        "contactCall": MessageLookupByLibrary.simpleMessage("Call"),
+        "contactChat": MessageLookupByLibrary.simpleMessage("Chat"),
+        "contactLegalDocuments":
             MessageLookupByLibrary.simpleMessage("Legal documents"),
-        "contact_map": MessageLookupByLibrary.simpleMessage("See the map"),
-        "contact_support":
+        "contactMap": MessageLookupByLibrary.simpleMessage("See the map"),
+        "contactSupport":
             MessageLookupByLibrary.simpleMessage("Contact support"),
-        "extra_price_count": m0,
+        "extraPriceCount": m0,
         "menu": MessageLookupByLibrary.simpleMessage("Menu"),
-        "menu_category_name": m1,
-        "menu_food_value_calories":
+        "menuCategoryName": m1,
+        "menuFoodValueCalories":
             MessageLookupByLibrary.simpleMessage("Calories"),
-        "menu_food_value_carbohydrates":
+        "menuFoodValueCarbohydrates":
             MessageLookupByLibrary.simpleMessage("Carbohydrates"),
-        "menu_food_value_fats": MessageLookupByLibrary.simpleMessage("Fats"),
-        "menu_food_value_grams_value": m2,
-        "menu_food_value_kcal_value": m3,
-        "menu_food_value_nutrition_facts":
+        "menuFoodValueFats": MessageLookupByLibrary.simpleMessage("Fats"),
+        "menuFoodValueGramsValue": m2,
+        "menuFoodValueKcalValue": m3,
+        "menuFoodValueNutritionFacts":
             MessageLookupByLibrary.simpleMessage("Nutrition facts (per 100 g)"),
-        "menu_food_value_proteins":
+        "menuFoodValueProteins":
             MessageLookupByLibrary.simpleMessage("Proteins"),
-        "menu_food_value_weight":
-            MessageLookupByLibrary.simpleMessage("Weight"),
-        "menu_offer_add_basket":
+        "menuFoodValueWeight": MessageLookupByLibrary.simpleMessage("Weight"),
+        "menuOfferAddBasket":
             MessageLookupByLibrary.simpleMessage("Add to basket"),
-        "menu_offer_add_basket_for_count": m4,
-        "menu_offer_add_taste":
+        "menuOfferAddBasketForCount": m4,
+        "menuOfferAddTaste":
             MessageLookupByLibrary.simpleMessage("Add to taste"),
-        "menu_offer_combo_slot_change":
+        "menuOfferComboSlotChange":
             MessageLookupByLibrary.simpleMessage("Change"),
-        "menu_offer_combo_slot_dialog_page_of": m5,
-        "menu_offer_combo_slot_product_card_add_deal":
+        "menuOfferComboSlotDialogPageOf": m5,
+        "menuOfferComboSlotProductCardAddDeal":
             MessageLookupByLibrary.simpleMessage("Add to deal"),
-        "menu_offer_combo_slot_product_card_cancel":
+        "menuOfferComboSlotProductCardCancel":
             MessageLookupByLibrary.simpleMessage("Cancel"),
-        "menu_offer_combo_slot_product_card_change_composition":
+        "menuOfferComboSlotProductCardChangeComposition":
             MessageLookupByLibrary.simpleMessage("Change composition"),
-        "menu_offer_combo_slot_product_card_change_ingredients":
+        "menuOfferComboSlotProductCardChangeIngredients":
             MessageLookupByLibrary.simpleMessage("Can be removed"),
-        "menu_offer_combo_slot_product_card_save":
+        "menuOfferComboSlotProductCardSave":
             MessageLookupByLibrary.simpleMessage("Save"),
-        "menu_offer_combo_slot_product_card_selected":
+        "menuOfferComboSlotProductCardSelected":
             MessageLookupByLibrary.simpleMessage("Selected"),
-        "menu_offer_diameter_full_name": m6,
-        "menu_offer_diameter_name": m7,
-        "menu_offer_dough_full_name": m8,
-        "menu_offer_dough_name": m9,
-        "menu_offer_piece_count": m10,
-        "menu_offer_remove_ingredients":
+        "menuOfferDiameterFullName": m6,
+        "menuOfferDiameterName": m7,
+        "menuOfferDoughFullName": m8,
+        "menuOfferDoughName": m9,
+        "menuOfferPieceCount": m10,
+        "menuOfferRemoveIngredients":
             MessageLookupByLibrary.simpleMessage("Remove ingredients"),
-        "menu_offer_remove_ingredients_dialog_done":
+        "menuOfferRemoveIngredientsDialogDone":
             MessageLookupByLibrary.simpleMessage("Done"),
-        "menu_offer_remove_ingredients_dialog_reset":
+        "menuOfferRemoveIngredientsDialogReset":
             MessageLookupByLibrary.simpleMessage("Reset"),
-        "menu_offer_volume_count": m11,
-        "menu_offer_weight_count": m12,
-        "menu_price_from_count": m13,
-        "price_count": m14,
-        "price_pattern": MessageLookupByLibrary.simpleMessage("0.00"),
+        "menuOfferVolumeCount": m11,
+        "menuOfferWeightCount": m12,
+        "menuPriceFromCount": m13,
+        "priceCount": m14,
+        "pricePattern": MessageLookupByLibrary.simpleMessage("0.00"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
-        "profile_enter_phone_number":
+        "profileEnterPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Enter the phone number"),
-        "profile_let_get_acquainted":
+        "profileLetGetAcquainted":
             MessageLookupByLibrary.simpleMessage("Let\'s get acquainted!"),
-        "profile_let_get_acquainted_content": MessageLookupByLibrary.simpleMessage(
+        "profileLetGetAcquaintedContent": MessageLookupByLibrary.simpleMessage(
             "Save your delivery address and be the first one to know about our promotions"),
-        "region_city_search_empty": MessageLookupByLibrary.simpleMessage(
+        "regionCitySearchEmpty": MessageLookupByLibrary.simpleMessage(
             "No pizza store has opened yet in this city"),
-        "region_city_search_hint":
+        "regionCitySearchHint":
             MessageLookupByLibrary.simpleMessage("Choose your city"),
-        "region_country": MessageLookupByLibrary.simpleMessage("Country"),
-        "region_country_name": m15
+        "regionCountry": MessageLookupByLibrary.simpleMessage("Country"),
+        "regionCountryName": m15
       };
 }

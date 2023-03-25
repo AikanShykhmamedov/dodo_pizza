@@ -34,13 +34,13 @@ class _ProfileScreenState extends State<ProfileScreen> with AutomaticKeepAliveCl
               ),
               const SizedBox(height: 32),
               Text(
-                S.of(context).profile_let_get_acquainted,
+                S.of(context).profileLetGetAcquainted,
                 style: Theme.of(context).textTheme.titleMedium!,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 12),
               Text(
-                S.of(context).profile_let_get_acquainted_content,
+                S.of(context).profileLetGetAcquaintedContent,
                 style: Theme.of(context).textTheme.bodyMedium!,
                 textAlign: TextAlign.center,
               ),
@@ -48,7 +48,7 @@ class _ProfileScreenState extends State<ProfileScreen> with AutomaticKeepAliveCl
               Center(
                 child: FilledButton(
                   onPressed: () {},
-                  child: Text(S.of(context).profile_enter_phone_number.toUpperCase()),
+                  child: Text(S.of(context).profileEnterPhoneNumber.toUpperCase()),
                 ),
               ),
             ],

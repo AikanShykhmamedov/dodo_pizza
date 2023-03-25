@@ -42,7 +42,7 @@ class ToppingCard extends StatelessWidget {
         ),
         const SizedBox(height: 4),
         Text(
-          S.of(context).preformatPrice(topping.price, (s) => s.price_count),
+          S.of(context).preformatPrice(topping.price, (s) => s.priceCount),
           style: Theme.of(context).textTheme.labelSmall!.copyWith(
             letterSpacing: 0.5,
           ),

@@ -6,7 +6,7 @@ typedef Translate = String Function(Object value);
 
 extension PriceFormatExtension on S {
   String preformatPrice(num price, Translate Function(S s) callback) {
-    final formattedPrice = NumberFormat(price_pattern).format(price);
+    final formattedPrice = NumberFormat(pricePattern).format(price);
     final translate = callback(this);
     return translate(formattedPrice);
   }

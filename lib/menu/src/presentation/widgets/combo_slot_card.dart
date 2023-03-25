@@ -94,7 +94,7 @@ class ComboSlotCard extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 4),
                         child: Text(
-                          S.of(context).preformatPrice(extraPrice, (s) => s.extra_price_count),
+                          S.of(context).preformatPrice(extraPrice, (s) => s.extraPriceCount),
                           style: Theme.of(context).textTheme.labelSmall!.copyWith(
                                 fontWeight: FontWeight.w400,
                               ),
@@ -106,7 +106,7 @@ class ComboSlotCard extends StatelessWidget {
                       style: FilledButton.styleFrom(
                         minimumSize: const Size.square(32),
                       ),
-                      child: Text(S.of(context).menu_offer_combo_slot_change),
+                      child: Text(S.of(context).menuOfferComboSlotChange),
                     )
                   ],
                 ),

@@ -22,7 +22,7 @@ class MenuOfferSingleProductContent extends StatelessWidget {
       name: product.name,
       details: product.size == null
           ? null
-          : S.of(context).menu_offer_product_size(product.size!),
+          : S.of(context).menuOfferProductSize(product.size!),
       description: product.description,
       products: [product],
       price: bundle.price,
@@ -36,7 +36,7 @@ class MenuOfferSingleProductContent extends StatelessWidget {
                   value: size,
                   isSelected: product.size == size,
                   label: Text(
-                    S.of(context).menu_offer_product_size(size),
+                    S.of(context).menuOfferProductSize(size),
                     style: Theme.of(context).textTheme.labelSmall,
                   ),
                 ),

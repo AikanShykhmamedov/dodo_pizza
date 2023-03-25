@@ -25,7 +25,7 @@ class FilteredCitiesList extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(24),
           child: Text(
-            S.of(context).region_city_search_empty,
+            S.of(context).regionCitySearchEmpty,
             textAlign: TextAlign.center,
           ),
         ),

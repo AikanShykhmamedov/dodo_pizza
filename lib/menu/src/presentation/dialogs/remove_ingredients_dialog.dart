@@ -48,7 +48,7 @@ class _RemoveIngredientsDialogState extends State<RemoveIngredientsDialog> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                S.of(context).menu_offer_remove_ingredients,
+                S.of(context).menuOfferRemoveIngredients,
                 style: Theme.of(context).textTheme.titleLarge!,
               ),
               const SizedBox(height: 16),
@@ -71,14 +71,12 @@ class _RemoveIngredientsDialogState extends State<RemoveIngredientsDialog> {
                 children: [
                   TextButton(
                     onPressed: _removedIngredients.isNotEmpty ? _onResetPressed : null,
-                    child: Text(
-                        S.of(context).menu_offer_remove_ingredients_dialog_reset.toUpperCase()),
+                    child: Text(S.of(context).menuOfferRemoveIngredientsDialogReset.toUpperCase()),
                   ),
                   const SizedBox(width: 8),
                   TextButton(
                     onPressed: _onDonePressed,
-                    child:
-                        Text(S.of(context).menu_offer_remove_ingredients_dialog_done.toUpperCase()),
+                    child: Text(S.of(context).menuOfferRemoveIngredientsDialogDone.toUpperCase()),
                   ),
                 ],
               ),

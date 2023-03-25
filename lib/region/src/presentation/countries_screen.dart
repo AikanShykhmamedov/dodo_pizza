@@ -37,7 +37,7 @@ class _CountriesScreenState extends State<CountriesScreen> {
         backgroundColor: Theme.of(context).colorScheme.background,
         appBar: AppBar(
           automaticallyImplyLeading: widget.canPop,
-          title: Text(S.of(context).region_country),
+          title: Text(S.of(context).regionCountry),
           titleSpacing: widget.canPop ? 0 : null,
         ),
         body: FutureBuilder<List<Country>>(

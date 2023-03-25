@@ -57,7 +57,7 @@ class _ComboSlotPizzaCardState extends State<ComboSlotPizzaCard> {
     final foreground = ComboSlotProductCardBase(
       imageUrl: pizza.imageUrl,
       name: pizza.name,
-      details: S.of(context).pizza_details(pizza),
+      details: S.of(context).pizzaDetails(pizza),
       description: pizza.ingredients.isNotEmpty ? null : pizza.description,
       price: bundle.price,
       products: [pizza],
@@ -82,7 +82,7 @@ class _ComboSlotPizzaCardState extends State<ComboSlotPizzaCard> {
             style: FilledButton.styleFrom(
               minimumSize: const Size.square(32),
             ),
-            child: Text(S.of(context).menu_offer_combo_slot_product_card_change_composition),
+            child: Text(S.of(context).menuOfferComboSlotProductCardChangeComposition),
           ),
         const Spacer(),
         SizedBox(
@@ -94,7 +94,7 @@ class _ComboSlotPizzaCardState extends State<ComboSlotPizzaCard> {
                   value: size,
                   isSelected: size == pizza.size,
                   label: Text(
-                    S.of(context).menu_offer_product_size(size),
+                    S.of(context).menuOfferProductSize(size),
                     style: Theme.of(context).textTheme.labelSmall!,
                   ),
                 ),
@@ -112,7 +112,7 @@ class _ComboSlotPizzaCardState extends State<ComboSlotPizzaCard> {
                   value: dough,
                   isSelected: dough == pizza.dough,
                   label: Text(
-                    S.of(context).menu_offer_dough_name(dough),
+                    S.of(context).menuOfferDoughName(dough),
                     style: Theme.of(context).textTheme.labelSmall!,
                   ),
                 ),

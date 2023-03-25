@@ -45,7 +45,7 @@ class MenuOfferPizzaContent extends StatelessWidget {
           shape: const RoundedRectangleBorder(),
         ),
         child: Text(
-          S.of(context).menu_offer_remove_ingredients,
+          S.of(context).menuOfferRemoveIngredients,
           style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                 color: Theme.of(context).colorScheme.primary,
               ),
@@ -56,7 +56,7 @@ class MenuOfferPizzaContent extends StatelessWidget {
     return MenuOfferContentBase(
       imageUrl: pizza.imageUrl,
       name: pizza.name,
-      details: S.of(context).pizza_details_full(pizza),
+      details: S.of(context).pizzaDetailsFull(pizza),
       products: [pizza],
       price: bundle.price,
       children: [
@@ -89,7 +89,7 @@ class MenuOfferPizzaContent extends StatelessWidget {
                 value: size,
                 isSelected: pizza.size == size,
                 label: Text(
-                  S.of(context).menu_offer_product_size(size),
+                  S.of(context).menuOfferProductSize(size),
                   style: Theme.of(context).textTheme.labelSmall!,
                 ),
               ),
@@ -104,7 +104,7 @@ class MenuOfferPizzaContent extends StatelessWidget {
                 value: dough,
                 isSelected: pizza.dough == dough,
                 label: Text(
-                  S.of(context).menu_offer_dough_name(dough),
+                  S.of(context).menuOfferDoughName(dough),
                   style: Theme.of(context).textTheme.labelSmall!,
                 ),
               ),
@@ -113,7 +113,7 @@ class MenuOfferPizzaContent extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         Text(
-          S.of(context).menu_offer_add_taste,
+          S.of(context).menuOfferAddTaste,
           style: Theme.of(context).textTheme.bodyLarge!,
         ),
         const SizedBox(height: 16),

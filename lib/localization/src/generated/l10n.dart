@@ -61,7 +61,7 @@ class S {
   }
 
   /// `{category, select, pizza {Pizza} combo {Combo} snacks {Snacks} desserts {Desserts} drinks {Drinks} sauces {Sauces} goods {Goods} other {}}`
-  String menu_category_name(Object category) {
+  String menuCategoryName(Object category) {
     return Intl.select(
       category,
       {
@@ -74,84 +74,84 @@ class S {
         'goods': 'Goods',
         'other': '',
       },
-      name: 'menu_category_name',
+      name: 'menuCategoryName',
       desc: '',
       args: [category],
     );
   }
 
   /// `from £{value}`
-  String menu_price_from_count(Object value) {
+  String menuPriceFromCount(Object value) {
     return Intl.message(
       'from £$value',
-      name: 'menu_price_from_count',
+      name: 'menuPriceFromCount',
       desc: '',
       args: [value],
     );
   }
 
   /// `Add to basket`
-  String get menu_offer_add_basket {
+  String get menuOfferAddBasket {
     return Intl.message(
       'Add to basket',
-      name: 'menu_offer_add_basket',
+      name: 'menuOfferAddBasket',
       desc: '',
       args: [],
     );
   }
 
   /// `Add to basket for £{value}`
-  String menu_offer_add_basket_for_count(Object value) {
+  String menuOfferAddBasketForCount(Object value) {
     return Intl.message(
       'Add to basket for £$value',
-      name: 'menu_offer_add_basket_for_count',
+      name: 'menuOfferAddBasketForCount',
       desc: '',
       args: [value],
     );
   }
 
   /// `Add to taste`
-  String get menu_offer_add_taste {
+  String get menuOfferAddTaste {
     return Intl.message(
       'Add to taste',
-      name: 'menu_offer_add_taste',
+      name: 'menuOfferAddTaste',
       desc: '',
       args: [],
     );
   }
 
   /// `{value} g`
-  String menu_offer_weight_count(Object value) {
+  String menuOfferWeightCount(Object value) {
     return Intl.message(
       '$value g',
-      name: 'menu_offer_weight_count',
+      name: 'menuOfferWeightCount',
       desc: '',
       args: [value],
     );
   }
 
   /// `{value} l`
-  String menu_offer_volume_count(Object value) {
+  String menuOfferVolumeCount(Object value) {
     return Intl.message(
       '$value l',
-      name: 'menu_offer_volume_count',
+      name: 'menuOfferVolumeCount',
       desc: '',
       args: [value],
     );
   }
 
   /// `{value} pcs.`
-  String menu_offer_piece_count(Object value) {
+  String menuOfferPieceCount(Object value) {
     return Intl.message(
       '$value pcs.',
-      name: 'menu_offer_piece_count',
+      name: 'menuOfferPieceCount',
       desc: '',
       args: [value],
     );
   }
 
   /// `{diameter, select, small {Small} medium {Medium} large {Large} other {}}`
-  String menu_offer_diameter_name(Object diameter) {
+  String menuOfferDiameterName(Object diameter) {
     return Intl.select(
       diameter,
       {
@@ -160,14 +160,14 @@ class S {
         'large': 'Large',
         'other': '',
       },
-      name: 'menu_offer_diameter_name',
+      name: 'menuOfferDiameterName',
       desc: '',
       args: [diameter],
     );
   }
 
   /// `{diameter, select, small {Small} medium {Medium} large {Large} other {}}`
-  String menu_offer_diameter_full_name(Object diameter) {
+  String menuOfferDiameterFullName(Object diameter) {
     return Intl.select(
       diameter,
       {
@@ -176,14 +176,14 @@ class S {
         'large': 'Large',
         'other': '',
       },
-      name: 'menu_offer_diameter_full_name',
+      name: 'menuOfferDiameterFullName',
       desc: '',
       args: [diameter],
     );
   }
 
   /// `{dough, select, original {Original} thin {Thin} other {}}`
-  String menu_offer_dough_name(Object dough) {
+  String menuOfferDoughName(Object dough) {
     return Intl.select(
       dough,
       {
@@ -191,14 +191,14 @@ class S {
         'thin': 'Thin',
         'other': '',
       },
-      name: 'menu_offer_dough_name',
+      name: 'menuOfferDoughName',
       desc: '',
       args: [dough],
     );
   }
 
   /// `{dough, select, original {Original crust} thin {Thin crust} other {}}`
-  String menu_offer_dough_full_name(Object dough) {
+  String menuOfferDoughFullName(Object dough) {
     return Intl.select(
       dough,
       {
@@ -206,198 +206,197 @@ class S {
         'thin': 'Thin crust',
         'other': '',
       },
-      name: 'menu_offer_dough_full_name',
+      name: 'menuOfferDoughFullName',
       desc: '',
       args: [dough],
     );
   }
 
   /// `Remove ingredients`
-  String get menu_offer_remove_ingredients {
+  String get menuOfferRemoveIngredients {
     return Intl.message(
       'Remove ingredients',
-      name: 'menu_offer_remove_ingredients',
+      name: 'menuOfferRemoveIngredients',
       desc: '',
       args: [],
     );
   }
 
   /// `Reset`
-  String get menu_offer_remove_ingredients_dialog_reset {
+  String get menuOfferRemoveIngredientsDialogReset {
     return Intl.message(
       'Reset',
-      name: 'menu_offer_remove_ingredients_dialog_reset',
+      name: 'menuOfferRemoveIngredientsDialogReset',
       desc: '',
       args: [],
     );
   }
 
   /// `Done`
-  String get menu_offer_remove_ingredients_dialog_done {
+  String get menuOfferRemoveIngredientsDialogDone {
     return Intl.message(
       'Done',
-      name: 'menu_offer_remove_ingredients_dialog_done',
+      name: 'menuOfferRemoveIngredientsDialogDone',
       desc: '',
       args: [],
     );
   }
 
   /// `Change`
-  String get menu_offer_combo_slot_change {
+  String get menuOfferComboSlotChange {
     return Intl.message(
       'Change',
-      name: 'menu_offer_combo_slot_change',
+      name: 'menuOfferComboSlotChange',
       desc: '',
       args: [],
     );
   }
 
   /// `{currentPage} of {pagesCount}`
-  String menu_offer_combo_slot_dialog_page_of(
-      Object currentPage, Object pagesCount) {
+  String menuOfferComboSlotDialogPageOf(Object currentPage, Object pagesCount) {
     return Intl.message(
       '$currentPage of $pagesCount',
-      name: 'menu_offer_combo_slot_dialog_page_of',
+      name: 'menuOfferComboSlotDialogPageOf',
       desc: '',
       args: [currentPage, pagesCount],
     );
   }
 
   /// `Change composition`
-  String get menu_offer_combo_slot_product_card_change_composition {
+  String get menuOfferComboSlotProductCardChangeComposition {
     return Intl.message(
       'Change composition',
-      name: 'menu_offer_combo_slot_product_card_change_composition',
+      name: 'menuOfferComboSlotProductCardChangeComposition',
       desc: '',
       args: [],
     );
   }
 
   /// `Can be removed`
-  String get menu_offer_combo_slot_product_card_change_ingredients {
+  String get menuOfferComboSlotProductCardChangeIngredients {
     return Intl.message(
       'Can be removed',
-      name: 'menu_offer_combo_slot_product_card_change_ingredients',
+      name: 'menuOfferComboSlotProductCardChangeIngredients',
       desc: '',
       args: [],
     );
   }
 
   /// `Add to deal`
-  String get menu_offer_combo_slot_product_card_add_deal {
+  String get menuOfferComboSlotProductCardAddDeal {
     return Intl.message(
       'Add to deal',
-      name: 'menu_offer_combo_slot_product_card_add_deal',
+      name: 'menuOfferComboSlotProductCardAddDeal',
       desc: '',
       args: [],
     );
   }
 
   /// `Cancel`
-  String get menu_offer_combo_slot_product_card_cancel {
+  String get menuOfferComboSlotProductCardCancel {
     return Intl.message(
       'Cancel',
-      name: 'menu_offer_combo_slot_product_card_cancel',
+      name: 'menuOfferComboSlotProductCardCancel',
       desc: '',
       args: [],
     );
   }
 
   /// `Save`
-  String get menu_offer_combo_slot_product_card_save {
+  String get menuOfferComboSlotProductCardSave {
     return Intl.message(
       'Save',
-      name: 'menu_offer_combo_slot_product_card_save',
+      name: 'menuOfferComboSlotProductCardSave',
       desc: '',
       args: [],
     );
   }
 
   /// `Selected`
-  String get menu_offer_combo_slot_product_card_selected {
+  String get menuOfferComboSlotProductCardSelected {
     return Intl.message(
       'Selected',
-      name: 'menu_offer_combo_slot_product_card_selected',
+      name: 'menuOfferComboSlotProductCardSelected',
       desc: '',
       args: [],
     );
   }
 
   /// `Nutrition facts (per 100 g)`
-  String get menu_food_value_nutrition_facts {
+  String get menuFoodValueNutritionFacts {
     return Intl.message(
       'Nutrition facts (per 100 g)',
-      name: 'menu_food_value_nutrition_facts',
+      name: 'menuFoodValueNutritionFacts',
       desc: '',
       args: [],
     );
   }
 
   /// `Calories`
-  String get menu_food_value_calories {
+  String get menuFoodValueCalories {
     return Intl.message(
       'Calories',
-      name: 'menu_food_value_calories',
+      name: 'menuFoodValueCalories',
       desc: '',
       args: [],
     );
   }
 
   /// `Proteins`
-  String get menu_food_value_proteins {
+  String get menuFoodValueProteins {
     return Intl.message(
       'Proteins',
-      name: 'menu_food_value_proteins',
+      name: 'menuFoodValueProteins',
       desc: '',
       args: [],
     );
   }
 
   /// `Fats`
-  String get menu_food_value_fats {
+  String get menuFoodValueFats {
     return Intl.message(
       'Fats',
-      name: 'menu_food_value_fats',
+      name: 'menuFoodValueFats',
       desc: '',
       args: [],
     );
   }
 
   /// `Carbohydrates`
-  String get menu_food_value_carbohydrates {
+  String get menuFoodValueCarbohydrates {
     return Intl.message(
       'Carbohydrates',
-      name: 'menu_food_value_carbohydrates',
+      name: 'menuFoodValueCarbohydrates',
       desc: '',
       args: [],
     );
   }
 
   /// `Weight`
-  String get menu_food_value_weight {
+  String get menuFoodValueWeight {
     return Intl.message(
       'Weight',
-      name: 'menu_food_value_weight',
+      name: 'menuFoodValueWeight',
       desc: '',
       args: [],
     );
   }
 
   /// `{value} kcal`
-  String menu_food_value_kcal_value(Object value) {
+  String menuFoodValueKcalValue(Object value) {
     return Intl.message(
       '$value kcal',
-      name: 'menu_food_value_kcal_value',
+      name: 'menuFoodValueKcalValue',
       desc: '',
       args: [value],
     );
   }
 
   /// `{value} g`
-  String menu_food_value_grams_value(Object value) {
+  String menuFoodValueGramsValue(Object value) {
     return Intl.message(
       '$value g',
-      name: 'menu_food_value_grams_value',
+      name: 'menuFoodValueGramsValue',
       desc: '',
       args: [value],
     );
@@ -414,30 +413,30 @@ class S {
   }
 
   /// `Let's get acquainted!`
-  String get profile_let_get_acquainted {
+  String get profileLetGetAcquainted {
     return Intl.message(
       'Let\'s get acquainted!',
-      name: 'profile_let_get_acquainted',
+      name: 'profileLetGetAcquainted',
       desc: '',
       args: [],
     );
   }
 
   /// `Save your delivery address and be the first one to know about our promotions`
-  String get profile_let_get_acquainted_content {
+  String get profileLetGetAcquaintedContent {
     return Intl.message(
       'Save your delivery address and be the first one to know about our promotions',
-      name: 'profile_let_get_acquainted_content',
+      name: 'profileLetGetAcquaintedContent',
       desc: '',
       args: [],
     );
   }
 
   /// `Enter the phone number`
-  String get profile_enter_phone_number {
+  String get profileEnterPhoneNumber {
     return Intl.message(
       'Enter the phone number',
-      name: 'profile_enter_phone_number',
+      name: 'profileEnterPhoneNumber',
       desc: '',
       args: [],
     );
@@ -454,60 +453,60 @@ class S {
   }
 
   /// `See the map`
-  String get contact_map {
+  String get contactMap {
     return Intl.message(
       'See the map',
-      name: 'contact_map',
+      name: 'contactMap',
       desc: '',
       args: [],
     );
   }
 
   /// `Contact support`
-  String get contact_support {
+  String get contactSupport {
     return Intl.message(
       'Contact support',
-      name: 'contact_support',
+      name: 'contactSupport',
       desc: '',
       args: [],
     );
   }
 
   /// `Call`
-  String get contact_call {
+  String get contactCall {
     return Intl.message(
       'Call',
-      name: 'contact_call',
+      name: 'contactCall',
       desc: '',
       args: [],
     );
   }
 
   /// `Chat`
-  String get contact_chat {
+  String get contactChat {
     return Intl.message(
       'Chat',
-      name: 'contact_chat',
+      name: 'contactChat',
       desc: '',
       args: [],
     );
   }
 
   /// `Legal documents`
-  String get contact_legal_documents {
+  String get contactLegalDocuments {
     return Intl.message(
       'Legal documents',
-      name: 'contact_legal_documents',
+      name: 'contactLegalDocuments',
       desc: '',
       args: [],
     );
   }
 
   /// `About our App`
-  String get contact_about_app {
+  String get contactAboutApp {
     return Intl.message(
       'About our App',
-      name: 'contact_about_app',
+      name: 'contactAboutApp',
       desc: '',
       args: [],
     );
@@ -524,57 +523,57 @@ class S {
   }
 
   /// `Oops, it's empty here!`
-  String get basket_empty {
+  String get basketEmpty {
     return Intl.message(
       'Oops, it\'s empty here!',
-      name: 'basket_empty',
+      name: 'basketEmpty',
       desc: '',
       args: [],
     );
   }
 
   /// `Your basket is empty, open the menu to get started.`
-  String get basket_empty_content {
+  String get basketEmptyContent {
     return Intl.message(
       'Your basket is empty, open the menu to get started.',
-      name: 'basket_empty_content',
+      name: 'basketEmptyContent',
       desc: '',
       args: [],
     );
   }
 
   /// `Minimum order amount for delivery is £10`
-  String get basket_empty_delivery {
+  String get basketEmptyDelivery {
     return Intl.message(
       'Minimum order amount for delivery is £10',
-      name: 'basket_empty_delivery',
+      name: 'basketEmptyDelivery',
       desc: '',
       args: [],
     );
   }
 
   /// `Go to menu`
-  String get basket_go_to_menu {
+  String get basketGoToMenu {
     return Intl.message(
       'Go to menu',
-      name: 'basket_go_to_menu',
+      name: 'basketGoToMenu',
       desc: '',
       args: [],
     );
   }
 
   /// `Country`
-  String get region_country {
+  String get regionCountry {
     return Intl.message(
       'Country',
-      name: 'region_country',
+      name: 'regionCountry',
       desc: '',
       args: [],
     );
   }
 
   /// `{isoName, select, BY {Belarus} CZ {Czech Republic} DE {Germany} EE {Estonia} FI {Finland} GB {United Kingdom} KG {Kyrgyzstan} KZ {Kazakhstan} LT {Lithuania} NG {Nigeria} PL {Poland} RO {Romania} RU {Russia} SI {Slovenia} SK {Slovakia} TJ {Tajikistan} UZ {Uzbekistan} VN {Vietnam} other {}}`
-  String region_country_name(Object isoName) {
+  String regionCountryName(Object isoName) {
     return Intl.select(
       isoName,
       {
@@ -598,57 +597,57 @@ class S {
         'VN': 'Vietnam',
         'other': '',
       },
-      name: 'region_country_name',
+      name: 'regionCountryName',
       desc: '',
       args: [isoName],
     );
   }
 
   /// `Choose your city`
-  String get region_city_search_hint {
+  String get regionCitySearchHint {
     return Intl.message(
       'Choose your city',
-      name: 'region_city_search_hint',
+      name: 'regionCitySearchHint',
       desc: '',
       args: [],
     );
   }
 
   /// `No pizza store has opened yet in this city`
-  String get region_city_search_empty {
+  String get regionCitySearchEmpty {
     return Intl.message(
       'No pizza store has opened yet in this city',
-      name: 'region_city_search_empty',
+      name: 'regionCitySearchEmpty',
       desc: '',
       args: [],
     );
   }
 
   /// `£{value}`
-  String price_count(Object value) {
+  String priceCount(Object value) {
     return Intl.message(
       '£$value',
-      name: 'price_count',
+      name: 'priceCount',
       desc: '',
       args: [value],
     );
   }
 
   /// `+£{value}`
-  String extra_price_count(Object value) {
+  String extraPriceCount(Object value) {
     return Intl.message(
       '+£$value',
-      name: 'extra_price_count',
+      name: 'extraPriceCount',
       desc: '',
       args: [value],
     );
   }
 
   /// `0.00`
-  String get price_pattern {
+  String get pricePattern {
     return Intl.message(
       '0.00',
-      name: 'price_pattern',
+      name: 'pricePattern',
       desc: '',
       args: [],
     );

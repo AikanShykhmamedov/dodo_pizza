@@ -108,7 +108,7 @@ class _CitiesAppBarState extends State<CitiesAppBar> {
                         textInputAction: TextInputAction.search,
                         style: Theme.of(context).inputDecorationTheme.hintStyle!,
                         decoration: InputDecoration(
-                          hintText: S.of(context).region_city_search_hint,
+                          hintText: S.of(context).regionCitySearchHint,
                         ),
                       ),
                     ),

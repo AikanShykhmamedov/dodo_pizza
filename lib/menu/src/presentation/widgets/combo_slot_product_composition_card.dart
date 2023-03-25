@@ -76,7 +76,7 @@ class _ComboSlotProductCompositionCardState extends State<ComboSlotProductCompos
           padding: const EdgeInsets.all(16),
           sliver: SliverToBoxAdapter(
             child: Text(
-              S.of(context).menu_offer_add_taste,
+              S.of(context).menuOfferAddTaste,
               style: titleStyle,
             ),
           ),
@@ -112,7 +112,7 @@ class _ComboSlotProductCompositionCardState extends State<ComboSlotProductCompos
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    S.of(context).menu_offer_combo_slot_product_card_change_ingredients,
+                    S.of(context).menuOfferComboSlotProductCardChangeIngredients,
                     style: titleStyle,
                   ),
                   const SizedBox(height: 8),
@@ -160,8 +160,7 @@ class _ComboSlotProductCompositionCardState extends State<ComboSlotProductCompos
                 Expanded(
                   child: FilledButton(
                     onPressed: _onSave,
-                    child:
-                        Text(S.of(context).menu_offer_combo_slot_product_card_save.toUpperCase()),
+                    child: Text(S.of(context).menuOfferComboSlotProductCardSave.toUpperCase()),
                   ),
                 ),
               ],
@@ -174,7 +173,7 @@ class _ComboSlotProductCompositionCardState extends State<ComboSlotProductCompos
                   backgroundColor: Theme.of(context).colorScheme.background,
                   foregroundColor: Theme.of(context).colorScheme.onBackground,
                 ),
-                child: Text(S.of(context).menu_offer_combo_slot_product_card_cancel.toUpperCase()),
+                child: Text(S.of(context).menuOfferComboSlotProductCardCancel.toUpperCase()),
               ),
             ),
     );

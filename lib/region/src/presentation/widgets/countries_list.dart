@@ -44,7 +44,7 @@ class CountriesList extends StatelessWidget {
   Map<Country, String> _getTranslationsMap(BuildContext context, List<Country> countries) {
     return <Country, String>{
       for (final country in countries) //
-        country: S.of(context).region_country_name(country.isoName),
+        country: S.of(context).regionCountryName(country.isoName),
     };
   }
 

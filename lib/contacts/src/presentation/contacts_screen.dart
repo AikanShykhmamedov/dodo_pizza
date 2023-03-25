@@ -35,7 +35,7 @@ class _ContactsScreenState extends State<ContactsScreen> with AutomaticKeepAlive
           padding: const EdgeInsets.only(bottom: 16),
           child: FilledButton(
             onPressed: () {},
-            child: Text(S.of(context).contact_map.toUpperCase()),
+            child: Text(S.of(context).contactMap.toUpperCase()),
           ),
         ),
       ],
@@ -46,14 +46,14 @@ class _ContactsScreenState extends State<ContactsScreen> with AutomaticKeepAlive
         Expanded(
           child: FilledButton.tonal(
             onPressed: () {},
-            child: Text(S.of(context).contact_call.toUpperCase()),
+            child: Text(S.of(context).contactCall.toUpperCase()),
           ),
         ),
         const SizedBox(width: 16),
         Expanded(
           child: FilledButton.tonal(
             onPressed: () {},
-            child: Text(S.of(context).contact_chat.toUpperCase()),
+            child: Text(S.of(context).contactChat.toUpperCase()),
           ),
         ),
       ],
@@ -90,7 +90,7 @@ class _ContactsScreenState extends State<ContactsScreen> with AutomaticKeepAlive
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Text(
-                S.of(context).contact_support,
+                S.of(context).contactSupport,
                 style: Theme.of(context).textTheme.titleMedium!,
               ),
             ),
@@ -106,12 +106,12 @@ class _ContactsScreenState extends State<ContactsScreen> with AutomaticKeepAlive
             const Divider(),
             ListButton(
               onPressed: () {},
-              title: S.of(context).contact_legal_documents,
+              title: S.of(context).contactLegalDocuments,
             ),
             const Divider(indent: 16),
             ListButton(
               onPressed: () {},
-              title: S.of(context).contact_about_app,
+              title: S.of(context).contactAboutApp,
             ),
             const Divider(),
           ],

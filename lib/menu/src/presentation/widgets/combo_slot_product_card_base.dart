@@ -46,18 +46,18 @@ class ComboSlotProductCardBase extends StatelessWidget {
       if (isProductSelected && !isBundleChanged) {
         button = FilledButton.tonal(
           onPressed: onSelect,
-          child: Text(S.of(context).menu_offer_combo_slot_product_card_selected.toUpperCase()),
+          child: Text(S.of(context).menuOfferComboSlotProductCardSelected.toUpperCase()),
         );
       } else {
         button = FilledButton(
           onPressed: onSelect,
-          child: Text(S.of(context).menu_offer_combo_slot_product_card_save.toUpperCase()),
+          child: Text(S.of(context).menuOfferComboSlotProductCardSave.toUpperCase()),
         );
       }
     } else {
       button = FilledButton(
         onPressed: onSelect,
-        child: Text(S.of(context).menu_offer_combo_slot_product_card_add_deal.toUpperCase()),
+        child: Text(S.of(context).menuOfferComboSlotProductCardAddDeal.toUpperCase()),
       );
     }
 
@@ -121,7 +121,7 @@ class ComboSlotProductCardBase extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(right: 8),
                         child: Text(
-                          S.of(context).preformatPrice(price, (s) => s.extra_price_count),
+                          S.of(context).preformatPrice(price, (s) => s.extraPriceCount),
                           style: Theme.of(context).textTheme.titleMedium!,
                         ),
                       ),

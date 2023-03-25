@@ -24,7 +24,7 @@ class PricesTable extends StatelessWidget {
               child: Text(comboBundle.product.name),
             ),
             const SizedBox(width: 8),
-            Text(S.of(context).preformatPrice(comboBundle.basePrice, (s) => s.price_count)),
+            Text(S.of(context).preformatPrice(comboBundle.basePrice, (s) => s.priceCount)),
           ],
         ),
         const SizedBox(height: 4),
@@ -39,9 +39,7 @@ class PricesTable extends StatelessWidget {
                     child: Text(productBundle.product.name),
                   ),
                   const SizedBox(width: 8),
-                  Text(S
-                      .of(context)
-                      .preformatPrice(productBundle.price, (s) => s.extra_price_count)),
+                  Text(S.of(context).preformatPrice(productBundle.price, (s) => s.extraPriceCount)),
                 ],
               ),
             ),

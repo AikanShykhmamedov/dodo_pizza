@@ -92,7 +92,7 @@ class _MenuScreenState extends State<MenuScreen> {
     );
 
     final categoryLabels = _categoryOffers.keys //
-        .map<String>(S.of(context).menu_category_name)
+        .map<String>(S.of(context).menuCategoryName)
         .toList();
 
     final productTypesHeader = ValueListenableBuilder<int>(
@@ -115,10 +115,10 @@ class _MenuScreenState extends State<MenuScreen> {
         final String price;
         if (offer.shoppingItems.length == 1) {
           final itemPrice = offer.shoppingItems.single.price;
-          price = S.of(context).preformatPrice(itemPrice, (s) => s.price_count);
+          price = S.of(context).preformatPrice(itemPrice, (s) => s.priceCount);
         } else {
           final minPrice = offer.shoppingItems.map<num>((e) => e.price).reduce(min);
-          price = S.of(context).preformatPrice(minPrice, (s) => s.menu_price_from_count);
+          price = S.of(context).preformatPrice(minPrice, (s) => s.menuPriceFromCount);
         }
 
         String? fullPrice;
@@ -127,7 +127,7 @@ class _MenuScreenState extends State<MenuScreen> {
           // Is it performant?
           final combo = _menuRepository.getProductById(shoppingItem.productId) as Combo;
           // What if fullPrice is equal to price?
-          fullPrice = S.of(context).preformatPrice(combo.fullPrice, (s) => s.price_count);
+          fullPrice = S.of(context).preformatPrice(combo.fullPrice, (s) => s.priceCount);
         }
 
         final onPricePressed = offer.shoppingItems.length == 1 && !offer.isCombo

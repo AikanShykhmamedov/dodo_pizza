@@ -37,19 +37,19 @@ class _BasketScreenState extends State<BasketScreen> with AutomaticKeepAliveClie
             ),
             const SizedBox(height: 16),
             Text(
-              S.of(context).basket_empty,
+              S.of(context).basketEmpty,
               style: Theme.of(context).textTheme.titleMedium!,
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 8),
             Text(
-              S.of(context).basket_empty_content,
+              S.of(context).basketEmptyContent,
               style: Theme.of(context).textTheme.bodyMedium!,
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 4),
             Text(
-              S.of(context).basket_empty_delivery,
+              S.of(context).basketEmptyDelivery,
               style: Theme.of(context).textTheme.bodyMedium!,
               textAlign: TextAlign.center,
             ),
@@ -57,7 +57,7 @@ class _BasketScreenState extends State<BasketScreen> with AutomaticKeepAliveClie
             Center(
               child: FilledButton(
                 onPressed: () {},
-                child: Text(S.of(context).basket_go_to_menu.toUpperCase()),
+                child: Text(S.of(context).basketGoToMenu.toUpperCase()),
               ),
             ),
           ],

@@ -26,12 +26,12 @@ class AddToBasketBar extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  S.of(context).preformatPrice(price, (s) => s.price_count),
+                  S.of(context).preformatPrice(price, (s) => s.priceCount),
                   style: Theme.of(context).textTheme.titleMedium!,
                 ),
                 const SizedBox(height: 4),
                 CrossedText(
-                  S.of(context).preformatPrice(fullPrice!, (s) => s.price_count),
+                  S.of(context).preformatPrice(fullPrice!, (s) => s.priceCount),
                   style: Theme.of(context).textTheme.bodyLarge!,
                 ),
               ],
@@ -40,7 +40,7 @@ class AddToBasketBar extends StatelessWidget {
           Expanded(
             child: FilledButton(
               onPressed: () {},
-              child: Text(S.of(context).menu_offer_add_basket.toUpperCase()),
+              child: Text(S.of(context).menuOfferAddBasket.toUpperCase()),
             ),
           ),
         ],
@@ -48,10 +48,9 @@ class AddToBasketBar extends StatelessWidget {
     } else {
       child = FilledButton(
         onPressed: () {},
-        child: Text(S
-            .of(context)
-            .preformatPrice(price, (s) => s.menu_offer_add_basket_for_count)
-            .toUpperCase()),
+        child: Text(
+          S.of(context).preformatPrice(price, (s) => s.menuOfferAddBasketForCount).toUpperCase(),
+        ),
       );
     }
 

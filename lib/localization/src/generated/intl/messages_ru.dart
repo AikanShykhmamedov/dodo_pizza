@@ -103,87 +103,83 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "basket": MessageLookupByLibrary.simpleMessage("Корзина"),
-        "basket_empty": MessageLookupByLibrary.simpleMessage("Ой, пусто!"),
-        "basket_empty_content": MessageLookupByLibrary.simpleMessage(
+        "basketEmpty": MessageLookupByLibrary.simpleMessage("Ой, пусто!"),
+        "basketEmptyContent": MessageLookupByLibrary.simpleMessage(
             "Ваша корзина пуста, добавьте\nпонравившийся товар из «Меню»."),
-        "basket_empty_delivery": MessageLookupByLibrary.simpleMessage(
+        "basketEmptyDelivery": MessageLookupByLibrary.simpleMessage(
             "Мы доставим ваш заказ от 549 ₽"),
-        "basket_go_to_menu":
+        "basketGoToMenu":
             MessageLookupByLibrary.simpleMessage("Перейти в меню"),
         "contact": MessageLookupByLibrary.simpleMessage("Контакты"),
-        "contact_about_app":
-            MessageLookupByLibrary.simpleMessage("О приложении"),
-        "contact_call": MessageLookupByLibrary.simpleMessage("Позвонить"),
-        "contact_chat": MessageLookupByLibrary.simpleMessage("Чат"),
-        "contact_legal_documents":
+        "contactAboutApp": MessageLookupByLibrary.simpleMessage("О приложении"),
+        "contactCall": MessageLookupByLibrary.simpleMessage("Позвонить"),
+        "contactChat": MessageLookupByLibrary.simpleMessage("Чат"),
+        "contactLegalDocuments":
             MessageLookupByLibrary.simpleMessage("Правовые документы"),
-        "contact_map":
-            MessageLookupByLibrary.simpleMessage("Пиццерии на карте"),
-        "contact_support":
+        "contactMap": MessageLookupByLibrary.simpleMessage("Пиццерии на карте"),
+        "contactSupport":
             MessageLookupByLibrary.simpleMessage("Связаться с поддержкой"),
-        "extra_price_count": m0,
+        "extraPriceCount": m0,
         "menu": MessageLookupByLibrary.simpleMessage("Меню"),
-        "menu_category_name": m1,
-        "menu_food_value_calories":
+        "menuCategoryName": m1,
+        "menuFoodValueCalories":
             MessageLookupByLibrary.simpleMessage("Энерг. ценность"),
-        "menu_food_value_carbohydrates":
+        "menuFoodValueCarbohydrates":
             MessageLookupByLibrary.simpleMessage("Углеводы"),
-        "menu_food_value_fats": MessageLookupByLibrary.simpleMessage("Жиры"),
-        "menu_food_value_grams_value": m2,
-        "menu_food_value_kcal_value": m3,
-        "menu_food_value_nutrition_facts":
+        "menuFoodValueFats": MessageLookupByLibrary.simpleMessage("Жиры"),
+        "menuFoodValueGramsValue": m2,
+        "menuFoodValueKcalValue": m3,
+        "menuFoodValueNutritionFacts":
             MessageLookupByLibrary.simpleMessage("Пищевая ценность на 100 г"),
-        "menu_food_value_proteins":
-            MessageLookupByLibrary.simpleMessage("Белки"),
-        "menu_food_value_weight": MessageLookupByLibrary.simpleMessage("Вес"),
-        "menu_offer_add_basket":
-            MessageLookupByLibrary.simpleMessage("В корзину"),
-        "menu_offer_add_basket_for_count": m4,
-        "menu_offer_add_taste":
+        "menuFoodValueProteins": MessageLookupByLibrary.simpleMessage("Белки"),
+        "menuFoodValueWeight": MessageLookupByLibrary.simpleMessage("Вес"),
+        "menuOfferAddBasket": MessageLookupByLibrary.simpleMessage("В корзину"),
+        "menuOfferAddBasketForCount": m4,
+        "menuOfferAddTaste":
             MessageLookupByLibrary.simpleMessage("Добавить по вкусу"),
-        "menu_offer_combo_slot_change":
+        "menuOfferComboSlotChange":
             MessageLookupByLibrary.simpleMessage("Заменить"),
-        "menu_offer_combo_slot_dialog_page_of": m5,
-        "menu_offer_combo_slot_product_card_add_deal":
+        "menuOfferComboSlotDialogPageOf": m5,
+        "menuOfferComboSlotProductCardAddDeal":
             MessageLookupByLibrary.simpleMessage("Выбрать"),
-        "menu_offer_combo_slot_product_card_cancel":
+        "menuOfferComboSlotProductCardCancel":
             MessageLookupByLibrary.simpleMessage("Отмена"),
-        "menu_offer_combo_slot_product_card_change_composition":
+        "menuOfferComboSlotProductCardChangeComposition":
             MessageLookupByLibrary.simpleMessage("Изменить состав"),
-        "menu_offer_combo_slot_product_card_change_ingredients":
+        "menuOfferComboSlotProductCardChangeIngredients":
             MessageLookupByLibrary.simpleMessage("Можно удалить"),
-        "menu_offer_combo_slot_product_card_save":
+        "menuOfferComboSlotProductCardSave":
             MessageLookupByLibrary.simpleMessage("Сохранить"),
-        "menu_offer_combo_slot_product_card_selected":
+        "menuOfferComboSlotProductCardSelected":
             MessageLookupByLibrary.simpleMessage("Уже в комбо"),
-        "menu_offer_diameter_full_name": m6,
-        "menu_offer_diameter_name": m7,
-        "menu_offer_dough_full_name": m8,
-        "menu_offer_dough_name": m9,
-        "menu_offer_piece_count": m10,
-        "menu_offer_remove_ingredients":
+        "menuOfferDiameterFullName": m6,
+        "menuOfferDiameterName": m7,
+        "menuOfferDoughFullName": m8,
+        "menuOfferDoughName": m9,
+        "menuOfferPieceCount": m10,
+        "menuOfferRemoveIngredients":
             MessageLookupByLibrary.simpleMessage("Убрать ингредиенты"),
-        "menu_offer_remove_ingredients_dialog_done":
+        "menuOfferRemoveIngredientsDialogDone":
             MessageLookupByLibrary.simpleMessage("Готово"),
-        "menu_offer_remove_ingredients_dialog_reset":
+        "menuOfferRemoveIngredientsDialogReset":
             MessageLookupByLibrary.simpleMessage("Сбросить"),
-        "menu_offer_volume_count": m11,
-        "menu_offer_weight_count": m12,
-        "menu_price_from_count": m13,
-        "price_count": m14,
-        "price_pattern": MessageLookupByLibrary.simpleMessage("0"),
+        "menuOfferVolumeCount": m11,
+        "menuOfferWeightCount": m12,
+        "menuPriceFromCount": m13,
+        "priceCount": m14,
+        "pricePattern": MessageLookupByLibrary.simpleMessage("0"),
         "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
-        "profile_enter_phone_number":
+        "profileEnterPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Указать телефон"),
-        "profile_let_get_acquainted":
+        "profileLetGetAcquainted":
             MessageLookupByLibrary.simpleMessage("Давайте знакомиться!"),
-        "profile_let_get_acquainted_content": MessageLookupByLibrary.simpleMessage(
+        "profileLetGetAcquaintedContent": MessageLookupByLibrary.simpleMessage(
             "Подарим подарок на день рождения,\nсохраним адрес доставки\nи расскажем об акциях"),
-        "region_city_search_empty": MessageLookupByLibrary.simpleMessage(
+        "regionCitySearchEmpty": MessageLookupByLibrary.simpleMessage(
             "Пиццерия в этом городе\nеще не открылась"),
-        "region_city_search_hint":
+        "regionCitySearchHint":
             MessageLookupByLibrary.simpleMessage("Найти город"),
-        "region_country": MessageLookupByLibrary.simpleMessage("Страна"),
-        "region_country_name": m15
+        "regionCountry": MessageLookupByLibrary.simpleMessage("Страна"),
+        "regionCountryName": m15
       };
 }

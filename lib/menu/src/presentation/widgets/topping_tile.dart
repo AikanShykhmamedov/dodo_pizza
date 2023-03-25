@@ -44,7 +44,7 @@ class ToppingTile extends StatelessWidget {
               ),
               const SizedBox(height: 4),
               Text(
-                S.of(context).preformatPrice(topping.price, (s) => s.extra_price_count),
+                S.of(context).preformatPrice(topping.price, (s) => s.extraPriceCount),
                 style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                       color: Theme.of(context).extension<AppColors>()!.textSecondary,
                     ),
